@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">Bright Futures</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Data</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Contents</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content_ST1.html">Solar Energy Solutions</a></li>
+                        <li><a href="content_ST2.html">Clean Cooking Methods</a></li>
+                        <li><a href="content_ST3.html">Energy Efficiency</a></li>
+                        <li><a href="content_ST4.html">Strategic Partnerships</a></li>
+                    </ul>
+                </li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-video">
+            <!-- Background video showing renewable energy sources for visual impact -->
+            <video autoplay muted loop aria-label="Background video showing renewable energy sources">
+                <source src="https://cdn.pixabay.com/vimeo/364639/renewable-energy-15663.mp4?width=1280&hash=b71c8b2b6af6e7b7b3b4c8f8f5b3c7f3f9b5c7b3" type="video/mp4">
+                <!-- Fallback for browsers that don't support video -->
+                Your browser does not support the video tag. The background video shows renewable energy sources in action.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Light Up the Future</h1>
+            <p>Empowering affordable, sustainable energy for everyone.</p>
+            <a href="content_ST1.html" class="cta-button">Start the Journey</a>
+        </div>
+    </section>
+
+    <section class="about-sdg7">
+        <div class="about-content">
+            <h2>Sustainable Development Goal 7</h2>
+            <p>Ensuring access to affordable, reliable, sustainable and modern energy for all by 2030.</p>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">800M+</span>
+                    <span class="stat-label">People without electricity</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2.6B</span>
+                    <span class="stat-label">Lack clean cooking access</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span class="progress-title">Progress to 2030 Goal</span>
+                    <span class="progress-percentage">60%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-cards">
+        <div class="cards-header">
+            <h2>Clean Energy Solutions</h2>
+            <p>Discover innovative approaches to sustainable energy</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">☀️</div>
+                <h3>Solar Empowerment</h3>
+                <p>Transforming lives through accessible solar power solutions.</p>
+                <a href="content_ST1.html" class="card-link">Explore</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <h3>Clean Cooking</h3>
+                <p>Modern cooking solutions that save lives and the environment.</p>
+                <a href="content_ST2.html" class="card-link">Explore</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Energy Efficiency</h3>
+                <p>Smart strategies to reduce waste and optimize energy use.</p>
+                <a href="content_ST3.html" class="card-link">Explore</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Strategic Partnerships</h3>
+                <p>Collaborative efforts driving sustainable energy forward.</p>
+                <a href="content_ST4.html" class="card-link">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-involved">
+        <div class="involved-content">
+            <h2>Join the Movement</h2>
+            <p>Be part of the solution for a sustainable energy future</p>
+            <div class="action-links">
+                <a href="volunteer.html" class="action-link">
+                    <span class="link-text">Volunteer</span>
+                </a>
+                <a href="feedback.html" class="action-link">
+                    <span class="link-text">Give Feedback</span>
+                </a>
+                <a href="team.html" class="action-link">
+                    <span class="link-text">Our Team</span>
+                </a>
+                <a href="sitemap.html" class="action-link">
+                    <span class="link-text">Sitemap</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="year"></span> Bright Futures | Accessible, affordable energy for all.</p>
+        <p><a href="pageEditor_ST2.html">Page Editor</a></p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+</html>
