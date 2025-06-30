@@ -18,6 +18,7 @@ header {
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 204, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav {
@@ -66,7 +67,7 @@ nav a {
     display: block;
 }
 
-nav a::after {
+nav a:not(.nav-logo)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -78,7 +79,7 @@ nav a::after {
     transform: translateX(-50%);
 }
 
-nav a:hover::after {
+nav a:not(.nav-logo):hover::after {
     width: 80%;
 }
 
@@ -633,13 +634,77 @@ nav a:hover {
     color: #FFD700;
 }
 
+.inspirational-quote {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.inspirational-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.3), transparent);
+}
+
+.quote-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inspirational-quote blockquote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #2c3e50;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+}
+
+.inspirational-quote blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #FFCC00;
+    position: absolute;
+    top: -0.5rem;
+    left: -2rem;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.inspirational-quote blockquote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #FFCC00;
+    position: absolute;
+    bottom: -1rem;
+    right: -2rem;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.inspirational-quote cite {
+    font-size: 1rem;
+    color: #FFCC00;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 footer {
   background: linear-gradient(135deg, #2c3e50, #34495e);
   color: #ecf0f1;
-  text-align: center;
-  padding: 2.5rem 1rem;
   margin-top: 0;
   position: relative;
+  padding: 0;
 }
 
 footer::before {
@@ -652,13 +717,106 @@ footer::before {
   background: linear-gradient(90deg, #FFCC00, #FFD700, #FFA500);
 }
 
-footer p {
-  margin: 0.5rem 0;
-  opacity: 0.9;
-  font-weight: 300;
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
 }
 
-footer a {
+.footer-section h3 {
+  color: #FFCC00;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.footer-section h4 {
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p {
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-links a:hover {
+  color: #FFCC00;
+  opacity: 1;
+  padding-left: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: #FFCC00;
+  color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0.25rem 0;
+  opacity: 0.8;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
   color: #FFCC00;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -666,7 +824,7 @@ footer a {
   border-radius: 15px;
 }
 
-footer a:hover {
+.footer-bottom a:hover {
     color: #FFD700;
     background-color: rgba(255, 204, 0, 0.1);
 }
