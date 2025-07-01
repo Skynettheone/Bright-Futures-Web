@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
-    <header>
+    <header id="top">
         <nav>
             <a href="index.html" class="nav-logo">Bright Futures</a>
             <ul>
@@ -202,9 +202,40 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Go to Top Button -->
+    <div class="go-to-top">
+        <a href="#top" aria-label="Go to top">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            </svg>
+        </a>
+    </div>
+    
     <script>
+        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Go to top button functionality
+        const goToTopButton = document.querySelector('.go-to-top');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) { // Show after scrolling 300px
+                goToTopButton.classList.add('show');
+            } else {
+                goToTopButton.classList.remove('show');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        goToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
-</html>
 </html>

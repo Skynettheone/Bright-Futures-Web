@@ -1,10 +1,11 @@
-body {
+html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     background-color: #ffffff;
     color: #2c3e50;
     line-height: 1.5;
     font-size: 16px;
+    scroll-behavior: smooth; /* Enables smooth scrolling animation */
 }
 
 header {
@@ -904,5 +905,56 @@ footer::before {
 .footer-divider {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
+}
+
+/* Go to Top Button */
+.go-to-top {
+    position: fixed;
+    bottom: 60px; /* Positioned between upper and lower footer */
+    right: 30px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.go-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.go-to-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Smaller size */
+    height: 40px; /* Smaller size */
+    background-color: #FFCC00;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.2);
+}
+
+.go-to-top a:hover {
+    background: rgba(44, 62, 80, 0.9);
+    color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.go-to-top svg {
+    width: 20px; /* Smaller icon */
+    height: 20px; /* Smaller icon */
+    transition: transform 0.3s ease;
+}
+
+.go-to-top a:hover svg {
+    transform: scale(1.1);
 }
 
