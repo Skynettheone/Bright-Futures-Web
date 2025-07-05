@@ -1,4 +1,4 @@
-
+/* Team members container: flexible and centered */
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   gap: 30px;
   padding: 40px;
 }
-
+/* Team member card style */
 .team-member {
   position: relative;
   width: 250px;
@@ -16,29 +16,29 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+/* Hover and focus effect for card */
 .team-member:hover,
 .team-member:focus {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   outline: none;
 }
-
+/* Team member image */
 .thumbnail {
   width: 100%;
   height: auto;
   transition: opacity 0.3s ease;
 }
-
+/* Image opacity on hover */
 .team-member:hover .thumbnail {
   opacity: 0.7;
 }
-
+/* Member info section */
 .member-info {
   padding: 15px;
   text-align: center;
 }
-
+/* Hidden details initially */
 .details {
   display: none;
   padding: 15px;
@@ -47,44 +47,45 @@
   font-size: 14px;
   border-top: 1px solid #ccc;
 }
-
+/* Show details on hover or focus */
 .team-member:hover .details,
 .team-member:focus .details {
   display: block;
 }
-
+/* Page title */
 h1.page-title {
   background-color: LightSkyBlue;
   padding: 15px;
   text-align: center;
   margin: 0;
 }
+/* Full height for layout */
 html, body {
   height: 100%;
   margin: 0;
 }
-
+/* Flex layout for body to keep footer at bottom */
 body {
   display: flex;
   flex-direction: column;
 }
-
+/* Main content area */
 main {
   flex: 1;
 }
-
+/* Main content area */
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
-
+/* Footer links */
 footer a {
   color: #00ffff;
   text-decoration: none;
 }
-
+/* Footer link hover effect */
 footer a:hover {
   text-decoration: underline;
 }
