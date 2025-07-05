@@ -1,6 +1,4 @@
-/* ===== CONTENT PAGE - FINALIZED CSS ===== */
 
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,15 +17,13 @@ body {
     padding-top: 90px; /* Space for fixed header */
 }
 
-/* ===== HEADER SECTION ===== */
+/*--------Header section--------*/
 
-/* Main header always on top */
 header#top {
     z-index: 1000 !important;
     position: fixed !important;
 }
 
-/* Article header with yellow theme */
 .article-header {
     background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
     color: #003566;
@@ -97,7 +93,7 @@ header#top {
     font-weight: 500;
 }
 
-/* ===== CONTENT NAVIGATION ===== */
+/*--------content navigation--------*/
 
 .content-nav {
     position: sticky;
@@ -149,7 +145,7 @@ header#top {
     color: #003566;
 }
 
-/* ===== MAIN CONTENT ===== */
+/*--------main content--------*/
 
 .article-content {
     max-width: 1400px;
@@ -169,7 +165,7 @@ header#top {
     z-index: 1;
 }
 
-/* Article layout system */
+/*--------layout--------*/
 .content-article{
     margin-top: 2rem;
 }
@@ -208,7 +204,7 @@ header#top {
     margin: 0 auto;
 }
 
-/* Content styling */
+/*--------content styles--------*/
 .content-article h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -231,7 +227,7 @@ header#top {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* CTA Section */
+/*--------call to action--------*/
 .cta-article {
     background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
     color: #003566;
@@ -247,7 +243,7 @@ header#top {
 
 .cta-button {
     padding: 0.7rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.9rem;
@@ -261,7 +257,6 @@ header#top {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 53, 102, 0.3);
     background: #001d3d;
 }
@@ -277,4 +272,3 @@ header#top {
     color: white;
 }
 
-/* ===== FINALIZED CONTENT PAGE CSS ===== */

@@ -314,12 +314,6 @@ header {
     margin-top: 5px;
 }
 
-.profile-area:hover .profile-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
 .profile-link {
     display: block;
     padding: 10px 20px;
