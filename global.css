@@ -55,7 +55,7 @@ header {
 
 .logo-text {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 650;
     color: #2c3e50;
     letter-spacing: -0.02em;
     transition: color 0.2s ease;
@@ -100,6 +100,7 @@ header {
     left: 50%;
     width: 0;
     height: 2px;
+    border-radius: 2px;
     background: linear-gradient(90deg, #FFCC00, #FFD700);
     transform: translateX(-50%);
     transition: width 0.3s ease;
@@ -298,6 +299,22 @@ footer::before {
 
 .footer-brand {
   flex: 1;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .footer-logo {
