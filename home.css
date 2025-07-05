@@ -41,7 +41,9 @@
     z-index: 3;
     color: white;
     max-width: 800px;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .hero-content h1 {
