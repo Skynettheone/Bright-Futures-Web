@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="style.css"> 
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>We Value Your Feedback</h2>
+    <form>
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname"  name="fullname" ><br>
+
+          <label for="email">Email Address :</label>
+          <input type="email"  id="email" name="email" placeholder="Example@gmail.com"><br>
+
+
+          <label for="phonenumber">Telephone Number: </label>
+          <input type="tel" id="phonenumber" name="phonenumber " placeholder="0123456789"><BR>
+
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="4" maxlength="100" placeholder="Please enter your address."></textarea>
+        </fieldset>
+
+        
+         <fieldset>
+                <legend>Support Sustainable Energy Access</legend>
+              
+                <label for="comments">Tell us how we can improve energy access:</label>
+                <textarea id="comments" name="comments" rows="4" maxlength="200" placeholder="Please share your suggestions" oninput="updateCounter(this)"></textarea>
+                <div class="charcount" id="charCount">200 characters remaining</div>
+            
+                <label for="interest">What area are you most concerned about?</label>
+                <select id="interest" name="interest">
+                  <option value="affordability">Affordability</option>
+                  <option value="renewables">Renewable Energy</option>
+                  <option value="accessibility">Accessibility in Rural Areas</option>
+                  <option value="education">Energy Education</option>
+                </select><br>
+
+              
+                <label for="features">Which solutions do you support?</label><br>
+                <select id="features" name="features" multiple size="3">
+                  <option value="solar">Solar Power Initiatives</option>
+                  <option value="wind">Wind Energy Projects</option>
+                  <option value="training">Training & Awareness</option>
+                  <option value="grid">Improving National Grid</option>
+                </select><br>
+              
+                <label for="source">How did you learn about our energy campaign?</label>
+                <input list="sources" id="source" name="source">
+                <datalist id="sources">
+                  <option value="Social Media">
+                  <option value="Local Community Center">
+                  <option value="School Program">
+                  <option value="Online News">
+                </datalist><br>
+              
+                <label>Would you participate in a future energy project?</label><br>
+                <input type="radio" id="yes" name="participate" value="yes" >
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="participate" value="no">
+                <label for="no">No</label><br>
+              
+                <label>What areas interest you? (Check all that apply)</label><br>
+                <input type="checkbox" id="technology" name="interests" value="Technology">
+                <label for="technology">Technology</label><br>
+                <input type="checkbox" id="policy" name="interests" value="Policy">
+                <label for="policy">Policy Making</label><br>
+                <input type="checkbox" id="awareness" name="interests" value="Awareness">
+                <label for="awareness">Public Awareness</label><br>
+              
+                <label for="date">When did you last experience an energy issue?</label>
+                <input type="date" id="date" name="date"> <br>
+              
+                <label for="datetime">When can we contact you for a follow-up?</label>
+                <input type="datetime-local" id="datetime" name="datetime"><br>
+              
+                <label for="file">Upload supporting image or document (PDF/Image):</label>
+                <input type="file" id="file" name="file" accept="image/*,.pdf"> <br>
+              
+                <label>Rate our efforts toward energy sustainability:</label>
+                <div class="rating">
+                  <label>
+                    <input type="radio" name="sustainability_rating" value="1" required>
+                    😠
+                  </label>
+                  <label>
+                    <input type="radio" name="sustainability_rating" value="2">
+                    😕
+                  </label>
+                  <label>
+                    <input type="radio" name="sustainability_rating" value="3">
+                    😐
+                  </label>
+                  <label>
+                    <input type="radio" name="sustainability_rating" value="4">
+                    🙂
+                  </label>
+                  <label>
+                    <input type="radio" name="sustainability_rating" value="5">
+                    😍
+                  </label>
+                </div>
+                
+        </fieldset>
+        <fieldset>
+            <button type="submit">Submit Feedback</button>
+        </fieldset>
+              
+        
+   </form>     
+   
+  <script>
+    function updateCounter(textarea) {
+      const maxLength = textarea.getAttribute("maxlength");
+      const currentLength = textarea.value.length;
+      document.getElementById("charCount").textContent = `${maxLength - currentLength} characters remaining`;
+    }
+  </script>
+
+  
+</body>
+</html>

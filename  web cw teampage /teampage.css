@@ -1,0 +1,77 @@
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.team-member {
+  position: relative;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover,
+.team-member:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.team-member:hover .thumbnail {
+  opacity: 0.7;
+}
+
+.member-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.details {
+  display: none;
+  padding: 15px;
+  background-color: #e0f7fa;
+  text-align: left;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+
+.team-member:hover .details,
+.team-member:focus .details {
+  display: block;
+}
+
+h1.page-title {
+  background-color: LightSkyBlue;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
