@@ -59,9 +59,32 @@
 
   </div>
 <!-- Footer section -->
-  <footer>
-    <p>Visit our <a href="">  </a></p>
-  </footer>
+<footer>
+  <div class="footer-container">
+      <div class="footer-main">
+          <div class="footer-brand">
+              <div class="footer-logos">
+                  <img src="E_SDG_logo_UN_emblem_square_trans_WEB.png" alt="SDG Goal 7 Logo" class="footer-logo-img">
+                  <img src="E_WEB_07.png" alt="SDG 7 Clean Energy Logo" class="footer-logo-img">
+              </div>
+              <p class="footer-tagline">Together for a brighter, cleaner future</p>
+          </div>
+      </div>
+      
+      <div class="footer-bottom-minimal">
+          <div class="footer-info">
+              <span>&copy; <span id="year"></span> Bright Futures</span>
+              <span class="footer-divider">|</span>
+              <span>SDG 7: Affordable & Clean Energy</span>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Update year automatically-->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
 </body> 
 </html>
