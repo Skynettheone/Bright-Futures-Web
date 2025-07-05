@@ -6,13 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Editor Student - provide your student name</title>
     <link rel="icon" href="Images/Goal_7/logo_goal.svg">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="pageEditor_validator.css"> <!-- External CSS link -->
 
 </head>
 <body>
-    
-    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
-
+    <header id="top">
+        <div class="sdg-banner">
+            <div class="banner-content">
+                <a href="https://sdgs.un.org/goals" target="_blank" class="sdg-tagline-link">
+                    <span class="sdg-tagline">17 Goals · One Planet · Our Future</span>
+                </a>
+                <div class="progress-indicator">
+                    <span class="year-countdown">5 years to 2030</span>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-container">
+            <!-- Logo Area -->
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
+                    <span class="logo-text">Bright Futures</span>
+                </a>
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">VOLUNTEER</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">DATA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">FEEDBACK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">TEAM</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        CONTENTS 
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content_ST1.html" class="dropdown-link">Affordable Energy</a></li>
+                        <li><a href="content_ST2.html" class="dropdown-link">Clean Cooking</a></li>
+                        <li><a href="content_ST3.html" class="dropdown-link">Smarter Energy</a></li>
+                        <li><a href="content_ST4.html" class="dropdown-link">Together for Energy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">SITEMAP</a>
+                </li>
+            </ul>
+            
+            <!-- Profile Toggle Area -->
+            <div class="profile-area">
+                <a href="user_profile.html" class="profile-toggle">
+                    <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
+                    <span class="profile-name">User</span>
+                </a>
+            </div>
+        </nav>
+    </header>
     <header id="top">
         <h1>Replace the header with your teams' website header</h1>
     </header>
@@ -122,8 +185,10 @@
         <div class="footer-container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <span class="footer-logo">Bright Futures</span>
-                    <p class="footer-tagline">Accessible, affordable energy for all.</p>
+                    <div class="footer-logos">
+                        <img src="Images/Goal_7/E_SDG_logo_UN_emblem_square_trans_WEB.png" alt="SDG Goal 7 Logo" class="footer-logo-img">
+                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG 7 Clean Energy Logo" class="footer-logo-img">
+                    </div>
                 </div>
                 
                 <div class="footer-links-section">
@@ -154,7 +219,7 @@
                         </a>
                         <a href="#" aria-label="Instagram" class="social-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
                             </svg>
                         </a>
                     </div>
@@ -179,41 +244,41 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Go to Top Button -->
-    <div class="go-to-top" id="goTopBtn">
-        <a href="#top" onclick="scrollToTop()">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    <div class="go-to-top">
+        <a href="#top" aria-label="Go to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
             </svg>
         </a>
     </div>
-
+    
     <script>
-        // Simple JavaScript for beginners
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Get the button element
-        var button = document.getElementById('goTopBtn');
+        // Go to top button functionality
+        const goToTopButton = document.querySelector('.go-to-top');
         
-        // Check scroll position when user scrolls
-        window.onscroll = function() {
-            // If user scrolls down 300 pixels, show the button
-            if (window.pageYOffset > 300) {
-                button.style.opacity = '1';
-                button.style.visibility = 'visible';
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) { // Show after scrolling 300px
+                goToTopButton.classList.add('show');
             } else {
-                button.style.opacity = '0';
-                button.style.visibility = 'hidden';
+                goToTopButton.classList.remove('show');
             }
-        };
+        });
         
-        // Function to scroll to top smoothly
-        function scrollToTop() {
+        // Smooth scroll to top when button is clicked
+        goToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        }
+        });
     </script>
+
 </body>
 </html>
