@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="4;url=index.html">
+    <title>Bright Futures</title>
+    <link rel="icon" href="Images/Goal_7/logo_goal.svg">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="splashScreen.css">
+</head>
+<body>
+    <div class="splash-container">
+        <div class="logo">
+            <img src="Images/Goal_7/logo_goal.svg" alt="Bright Futures Logo" class="logo-image">
+            <h1>Bright Futures</h1>
+        </div>
+        
+        <div class="mission">
+            <h2>Sustainable Development Goal 7</h2>
+            <p>Empowering affordable, sustainable energy for everyone</p>
+        </div>
+        
+        <div class="team-info">
+            <h3>Created by Students</h3>
+            <div class="team-members">
+                <div class="member">Chathunka Somarathna</div>
+                <div class="member">Tharuka Sanketh</div>
+                <div class="member">Nipun Nirman</div>
+            </div>
+        </div>
+        
+        <div class="loading">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p>Loading... <span id="countdown">4</span> seconds</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple countdown timer
+        let timeLeft = 4;
+        
+        // Update countdown every second
+        setInterval(function() {
+            timeLeft = timeLeft - 1;
+            document.getElementById('countdown').textContent = timeLeft;
+            
+            // Stop when countdown reaches 0
+            if (timeLeft <= 0) {
+                document.getElementById('countdown').textContent = '0';
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
