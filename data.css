@@ -1,0 +1,381 @@
+header #top {
+    z-index: 1000;
+    position: fixed;
+}
+
+.article-header {
+    background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+    color: #003566;
+    padding: 4rem 0 2rem 0;
+    margin-top: 4em;
+    position: relative;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.article-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.article-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+
+/* Table section */
+.table-section {
+    padding: 40px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #003566;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom table with borders and shadows */
+.energy-data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Header styling with theme colors */
+.table-header {
+    background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+    color: #003566;
+}
+
+.header-cell {
+    padding: 18px 16px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    border-bottom: 2px solid #ffbe0b;
+    position: relative;
+    color: #003566;
+    transition: all 0.3s ease;
+    cursor: help;
+    vertical-align: middle;
+}
+
+.header-cell:first-child {
+    border-left: none;
+}
+
+.header-cell:not(:last-child) {
+    border-right: 1px solid rgba(0, 53, 102, 0.2);
+}
+
+/* Main topic header styling */
+.main-topic {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 14px;
+    background: linear-gradient(135deg, #003566, #001d3d);
+    color: white;
+    border-bottom: 2px solid #003566;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.header-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+/* Table logo in header */
+.table-logo-cell {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    color: #ffd60a;
+    text-align: center;
+    padding: 20px;
+    border-right: 2px solid #ffd60a;
+}
+
+.table-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 8px;
+    display: flex;
+}
+
+.sdg-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Row styling with alternating colors */
+.country-group-header {
+    background-color: #f3f4f6;
+    font-weight: 700;
+    color: #003566;
+}
+
+.country-row {
+    background-color: white;
+}
+
+/* .country-row:nth-child(even) {
+    background-color: #f8fafc;
+} */
+
+.country-row:hover {
+    background-color: #fffbeb;
+    transition: background-color 0.3s ease;
+}
+
+/* Cell styling */
+.table-cell {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+/* .table-cell:not(:last-child) {
+    border-right: 1px solid #e2e8f0;
+} */
+
+.country-name {
+    font-weight: 600;
+    color: #003566;
+}
+
+/* Status indicators - clean pill-style buttons */
+.status-indicator {
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    line-height: 1.3;
+    margin: 4px 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-indicator:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.status-red {
+    background-color: #ef4444;
+    color: white;
+}
+
+.status-yellow {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+
+.status-green {
+    background-color: #22c55e;
+    color: #1f2937;
+}
+
+/* Links styling */
+.policy-link {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid #ffd60a;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.85rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.policy-link:hover {
+    background-color: #ffd60a;
+    color: #003566;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 214, 10, 0.3);
+}
+
+/* Row and column merge styling */
+.merged-cell {
+    text-align: center;
+    font-weight: 700;
+    background-color: #f1f5f9;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* References Section */
+.references-section {
+    margin: 20px 30px 50px 30px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    border-left: 4px solid #ffd60a;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+.references-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003566;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.references-content {
+    text-align: left;
+}
+
+.references-intro {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.references-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.references-list li {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.reference-link {  
+    color: #003566;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.reference-link:hover {
+    color: #ffd60a;
+    text-decoration: none;
+}
+
+/* Tooltip Styles for Column Headers */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+.header-cell[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 53, 102, 0.92);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    white-space: normal;
+    z-index: 10000;
+    animation: tooltipSlideDown 0.2s ease forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.3;
+    word-wrap: break-word;
+    pointer-events: none;
+    overflow-wrap: break-word;
+}
+
+@keyframes tooltipSlideDown {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Ensure tooltips appear above table content */
+.table-header .header-cell {
+    overflow: visible;
+    position: relative;
+}
+
+.table-header {
+    position: relative;
+    z-index: 100;
+}
+
+.energy-data-table {
+    position: relative;
+    z-index: 50;
+}
