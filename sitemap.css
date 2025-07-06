@@ -1,0 +1,130 @@
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Sitemap Specific Styles */
+.sitemap-page-wrapper {
+    min-height: 50vh;
+    padding: 1rem 2rem;
+    background: transparent;
+}
+
+.sitemap-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 1rem 0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.sitemap-page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* SVG Container Styles */
+.sitemap-svg-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.sitemap-svg-viewport {
+    border: none;
+    padding: 0.5rem;
+    background: transparent;
+    min-width: 1200px;
+}
+
+svg {
+    display: block;
+    background: transparent;
+}
+
+/* SVG Interactive Elements */
+.sitemap-interactive-button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.sitemap-interactive-button:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Button Hover Effects */
+rect[fill="#FFD700"]:hover {
+    fill: #DAA520 !important;
+    stroke: #DAA520 !important;
+}
+
+/* SVG Text and Links */
+svg text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    pointer-events: none;
+    user-select: none;
+}
+
+svg a {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+svg a:hover text {
+    fill: white !important;
+}
+
+/* Connection Lines */
+svg line {
+    transition: stroke 0.3s ease;
+    stroke: #333333;
+    stroke-width: 3;
+}
+
+/* Accessibility and Focus */
+svg a:focus rect {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
