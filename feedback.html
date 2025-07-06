@@ -3,329 +3,278 @@
 <head>
   <meta charset="UTF-8">
   <title>Feedback Form</title>
+  <!-- Page icon -->
   <link rel="icon" href="Images/Goal_7/logo_goal.svg">
+  <!-- Global styles -->
   <link rel="stylesheet" href="global.css">
+  <!-- Page-specific styles -->
   <link rel="stylesheet" href="feedback.css"> 
 </head>
 <body>
-    <header id="top">
-      <div class="sdg-banner">
-          <div class="banner-content">
-              <a href="https://sdgs.un.org/goals" target="_blank" class="sdg-tagline-link">
-                  <span class="sdg-tagline">17 Goals · One Planet · Our Future</span>
-              </a>
-              <div class="progress-indicator">
-                  <span class="year-countdown">5 years to 2030</span>
-              </div>
-          </div>
+
+  <!-- Top banner with SDG tagline -->
+  <header id="top">
+    <div class="sdg-banner">
+      <div class="banner-content">
+        <a href="https://sdgs.un.org/goals" target="_blank" class="sdg-tagline-link">
+          <span class="sdg-tagline">17 Goals · One Planet · Our Future</span>
+        </a>
+        <div class="progress-indicator">
+          <span class="year-countdown">5 years to 2030</span>
+        </div>
       </div>
-      <nav class="nav-container">
-          <!-- Logo Area -->
-          <div class="logo-area">
-              <a href="index.html" class="logo">
-                  <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
-                  <span class="logo-text">Bright Futures</span>
-              </a>
-          </div>
-          
-          <!-- Navigation Links -->
-          <ul class="nav-menu">
-              <li class="nav-item">
-                  <a href="index.html" class="nav-link">HOME</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">VOLUNTEER</a>
-              </li>
-              <li class="nav-item">
-                  <a href="data_table.html" class="nav-link">DATA</a>
-              </li>
-              <li class="nav-item">
-                  <a href="feedback.html" class="nav-link active">FEEDBACK</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">TEAM</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle">
-                      CONTENTS 
-                      <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
-                      </svg>
-                  </a>
-                  <ul class="dropdown-menu">
-                      <li><a href="content_ST1.html" class="dropdown-link">Affordable Energy</a></li>
-                      <li><a href="content_ST2.html" class="dropdown-link">Clean Cooking</a></li>
-                      <li><a href="content_ST3.html" class="dropdown-link">Smarter Energy</a></li>
-                      <li><a href="content_ST4.html" class="dropdown-link">Together for Energy</a></li>
-                  </ul>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">SITEMAP</a>
-              </li>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="nav-container">
+      <!-- Logo -->
+      <div class="logo-area">
+        <a href="index.html" class="logo">
+          <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
+          <span class="logo-text">Bright Futures</span>
+        </a>
+      </div>
+
+      <!-- Menu links -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="#" class="nav-link">VOLUNTEER</a></li>
+        <li><a href="data_table.html" class="nav-link">DATA</a></li>
+        <li><a href="feedback.html" class="nav-link active">FEEDBACK</a></li>
+        <li><a href="#" class="nav-link">TEAM</a></li>
+        <!-- Dropdown menu for content -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">
+            CONTENTS
+            <svg class="dropdown-arrow" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="content_ST1.html">Affordable Energy</a></li>
+            <li><a href="content_ST2.html">Clean Cooking</a></li>
+            <li><a href="content_ST3.html">Smarter Energy</a></li>
+            <li><a href="content_ST4.html">Together for Energy</a></li>
           </ul>
-          
-          <!-- Profile Toggle Area -->
-          <div class="profile-area">
-              <a href="user_profile.html" class="profile-toggle">
-                  <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
-                  <span class="profile-name">User</span>
-              </a>
-          </div>
-      </nav>
-  </header>
+        </li>
+        <li><a href="#" class="nav-link">SITEMAP</a></li>
+      </ul>
 
-  <!-- Topic Area Header -->
-  <header class="article-header">
-      <div class="article-container">
-          <h1 class="article-title">We Value Your Feedback</h1>
-          <p class="article-subtitle">Help us improve sustainable energy access for everyone!</p>
+      <!-- User profile link -->
+      <div class="profile-area">
+        <a href="user_profile.html" class="profile-toggle">
+          <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
+          <span class="profile-name">User</span>
+        </a>
       </div>
+    </nav>
   </header>
 
+  <!-- Header for the feedback page -->
+  <header class="article-header">
+    <div class="article-container">
+      <h1 class="article-title">We Value Your Feedback</h1>
+      <p class="article-subtitle">Help us improve sustainable energy access for everyone!</p>
+    </div>
+  </header>
 
+  <!-- Main feedback section -->
   <div class="feedback-section">
     <form id="feedbackForm">
-       <!-- Personal details section -->
-        <fieldset>
-          <legend>Personal Details</legend>
+      
+      <!-- Personal details part -->
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fullname" class="required-field">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+        <div class="field-help">This helps us personalize our response to you</div>
 
-          <label for="fullname" class="required-field">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
-          <div class="field-help">This helps us personalize our response to you</div>
+        <label for="email" class="required-field">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+        <div class="field-help">We'll use this to send you updates</div>
 
-          <label for="email" class="required-field">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="example@gmail.com">
-          <div class="field-help">We'll use this to send you updates on our energy initiatives</div>
+        <label for="phonenumber">Telephone Number</label>
+        <input type="tel" id="phonenumber" name="phonenumber" placeholder="0123456789">
+        <div class="field-help">Optional - for urgent follow-ups</div>
 
-          <label for="phonenumber">Telephone Number</label>
-          <input type="tel" id="phonenumber" name="phonenumber" placeholder="0123456789">
-          <div class="field-help">Optional - for urgent follow-ups only</div>
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" maxlength="100" placeholder="Please enter your address (optional)"></textarea>
+        <div class="field-help">Helps us understand regional challenges</div>
+      </fieldset>
 
-          <label for="address">Address</label>
-          <textarea id="address" name="address" rows="3" maxlength="100" placeholder="Please enter your address (optional)"></textarea>
-          <div class="field-help">Helps us understand regional energy challenges</div>
-        </fieldset>
-
-        <!-- Feedback and support section --> 
-         <fieldset>
-                <legend>Support Sustainable Energy Access</legend>
-              
-                <label for="comments" class="required-field">Tell us how we can improve energy access</label>
-                <textarea id="comments" name="comments" rows="4" maxlength="200" required placeholder="Share your ideas and suggestions for better energy solutions" oninput="updateCounter(this)"></textarea>
-                <div class="charcount" id="charCount">200 characters remaining</div>
-                <div class="field-help">Your insights help us create better energy policies and programs</div>
-            
-                <label for="interest" class="required-field">What area are you most concerned about?</label>
-                <select id="interest" name="interest" required>
-                  <option value="">-- Please choose an option --</option>
-                  <option value="affordability">Making Energy More Affordable</option>
-                  <option value="renewables">Expanding Renewable Energy</option>
-                  <option value="accessibility">Bringing Energy to Rural Areas</option>
-                  <option value="education">Energy Education & Awareness</option>
-                </select>
-                <div class="field-help">This helps us prioritize our focus areas</div>
-
-              
-                <label for="features">Which solutions do you support? (Hold Ctrl/Cmd to select multiple)</label>
-                <select id="features" name="features" multiple size="4">
-                  <option value="solar">Solar Power Initiatives</option>
-                  <option value="wind">Wind Energy Projects</option>
-                  <option value="training">Training & Awareness Programs</option>
-                  <option value="grid">Improving National Grid Infrastructure</option>
-                </select>
-                <div class="field-help">Your selections help us understand community priorities</div>
-              
-                <label for="source">How did you learn about our energy campaign?</label>
-                <input list="sources" id="source" name="source" placeholder="Start typing or choose from suggestions">
-                <datalist id="sources">
-                  <option value="Social Media (Facebook, Twitter, Instagram)">
-                  <option value="Local Community Center">
-                  <option value="School Program">
-                  <option value="Online News Website">
-                  <option value="Word of Mouth from Friends/Family">
-                  <option value="Government Initiative">
-                </datalist>
-                <div class="field-help">This helps us improve our outreach efforts</div>
-              
-                <label>Would you participate in a future energy project?</label>
-                <div class="radio-group">
-                  <input type="radio" id="yes" name="participate" value="yes" required>
-                  <label for="yes">Yes, I'm interested in participating</label><br>
-                  <input type="radio" id="no" name="participate" value="no">
-                  <label for="no">No, not at this time</label><br>
-                  <input type="radio" id="maybe" name="participate" value="maybe">
-                  <label for="maybe">Maybe, depending on the project</label>
-                </div>
-                <div class="field-help">Your participation helps us plan future initiatives</div>
-              
-                <label>What areas interest you? (Check all that apply)</label>
-                <div class="checkbox-group">
-                  <input type="checkbox" id="technology" name="interests" value="Technology">
-                  <label for="technology">Energy Technology & Innovation</label><br>
-                  <input type="checkbox" id="policy" name="interests" value="Policy">
-                  <label for="policy">Policy Making & Advocacy</label><br>
-                  <input type="checkbox" id="awareness" name="interests" value="Awareness">
-                  <label for="awareness">Public Awareness & Education</label><br>
-                  <input type="checkbox" id="community" name="interests" value="Community">
-                  <label for="community">Community Outreach Programs</label>
-                </div>
-                <div class="field-help">We'll tailor future communications to your interests</div>
-              
-                <label for="date">When did you last experience an energy issue?</label>
-                <input type="date" id="date" name="date">
-                <div class="field-help">Optional - helps us understand current energy challenges</div>
-              
-                <label for="datetime">When can we contact you for a follow-up?</label>
-                <input type="datetime-local" id="datetime" name="datetime">
-                <div class="field-help">Optional - choose a convenient time for us to reach out</div>
-              
-                <label for="file">Upload supporting image or document (PDF/Image):</label>
-                <input type="file" id="file" name="file" accept="image/*,.pdf">
-                <div class="field-help">Optional - photos of energy issues or relevant documents</div>
-              
-                <label class="required-field">Rate our efforts toward energy sustainability:</label>
-                <div class="rating">
-                  <label title="Very Poor - Needs major improvement">
-                    <input type="radio" name="sustainability_rating" value="1" required>
-                    😠
-                  </label>
-                  <label title="Poor - Needs improvement">
-                    <input type="radio" name="sustainability_rating" value="2">
-                    😕
-                  </label>
-                  <label title="Average - Satisfactory">
-                    <input type="radio" name="sustainability_rating" value="3">
-                    😐
-                  </label>
-                  <label title="Good - Well done">
-                    <input type="radio" name="sustainability_rating" value="4">
-                    🙂
-                  </label>
-                  <label title="Excellent - Outstanding work">
-                    <input type="radio" name="sustainability_rating" value="5">
-                    😍
-                  </label>
-                </div>
-                <div class="field-help">Your rating helps us measure our impact and improve our services</div>
-                
-        </fieldset>
+      <!-- Feedback questions part -->
+      <fieldset>
+        <legend>Support Sustainable Energy Access</legend>
         
-        <div class="submit-container">
-            <button type="submit">Submit Feedback</button>
+        <label for="comments" class="required-field">How can we improve energy access?</label>
+        <textarea id="comments" name="comments" rows="4" maxlength="200" required placeholder="Share your ideas" oninput="updateCounter(this)"></textarea>
+        <div class="charcount" id="charCount">200 characters remaining</div>
+
+        <label for="interest" class="required-field">Main concern area?</label>
+        <select id="interest" name="interest" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="affordability">Making Energy More Affordable</option>
+          <option value="renewables">Expanding Renewable Energy</option>
+          <option value="accessibility">Bringing Energy to Rural Areas</option>
+          <option value="education">Energy Education & Awareness</option>
+        </select>
+
+        <label for="features">Solutions you support (multiple)</label>
+        <select id="features" name="features" multiple size="4">
+          <option value="solar">Solar Power</option>
+          <option value="wind">Wind Energy</option>
+          <option value="training">Training Programs</option>
+          <option value="grid">Grid Infrastructure</option>
+        </select>
+
+        <label for="source">How did you hear about us?</label>
+        <input list="sources" id="source" name="source" placeholder="Type or choose">
+        <datalist id="sources">
+          <option value="Social Media">
+          <option value="Community Center">
+          <option value="School Program">
+          <option value="Online News">
+          <option value="Word of Mouth">
+          <option value="Government Initiative">
+        </datalist>
+
+        <!-- Radio buttons for participation -->
+        <label>Would you participate in a project?</label>
+        <div class="radio-group">
+          <input type="radio" id="yes" name="participate" value="yes" required>
+          <label for="yes">Yes</label><br>
+          <input type="radio" id="no" name="participate" value="no">
+          <label for="no">No</label><br>
+          <input type="radio" id="maybe" name="participate" value="maybe">
+          <label for="maybe">Maybe</label>
         </div>
-              
-        
-   </form>     
-   
-  <script>
-    function updateCounter(textarea) {
-      const maxLength = textarea.getAttribute("maxlength");
-      const currentLength = textarea.value.length;
-      document.getElementById("charCount").textContent = `${maxLength - currentLength} characters remaining`;
-    }
-  </script>
 
+        <!-- Checkbox group for interests -->
+        <label>Areas that interest you</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="technology" name="interests" value="Technology">
+          <label for="technology">Technology</label><br>
+          <input type="checkbox" id="policy" name="interests" value="Policy">
+          <label for="policy">Policy</label><br>
+          <input type="checkbox" id="awareness" name="interests" value="Awareness">
+          <label for="awareness">Awareness</label><br>
+          <input type="checkbox" id="community" name="interests" value="Community">
+          <label for="community">Community</label>
+        </div>
+
+        <!-- Date and time inputs -->
+        <label for="date">When did you last have an energy issue?</label>
+        <input type="date" id="date" name="date">
+
+        <label for="datetime">When can we contact you?</label>
+        <input type="datetime-local" id="datetime" name="datetime">
+
+        <!-- File upload -->
+        <label for="file">Upload image or document</label>
+        <input type="file" id="file" name="file" accept="image/*,.pdf">
+
+        <!-- Rating -->
+        <label class="required-field">Rate our efforts:</label>
+        <div class="rating">
+          <label><input type="radio" name="sustainability_rating" value="1" required> 😠</label>
+          <label><input type="radio" name="sustainability_rating" value="2"> 😕</label>
+          <label><input type="radio" name="sustainability_rating" value="3"> 😐</label>
+          <label><input type="radio" name="sustainability_rating" value="4"> 🙂</label>
+          <label><input type="radio" name="sustainability_rating" value="5"> 😍</label>
+        </div>
+      </fieldset>
+
+      <!-- Submit button -->
+      <div class="submit-container">
+        <button type="submit">Submit Feedback</button>
+      </div>
+    </form>
+
+    <!-- Character counter script -->
+    <script>
+      function updateCounter(textarea) {
+        const maxLength = textarea.getAttribute("maxlength");
+        const currentLength = textarea.value.length;
+        document.getElementById("charCount").textContent = `${maxLength - currentLength} characters remaining`;
+      }
+    </script>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <div class="footer-logos">
-                    <img src="Images/Goal_7/E_SDG_logo_UN_emblem_square_trans_WEB.png" alt="SDG Goal 7 Logo" class="footer-logo-img">
-                    <img src="Images/Goal_7/E_WEB_07.png" alt="SDG 7 Clean Energy Logo" class="footer-logo-img">
-                </div>
-            </div>
-            
-            <div class="footer-links-section">
-                <div class="footer-links-minimal">
-                    <a href="volunteer.html">Volunteer</a>
-                    <a href="team.html">Team</a>
-                    <a href="feedback.html">Feedback</a>
-                    <a href="table.html">Data</a>
-                </div>
-            </div>
-            
-            <div class="footer-connect">
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook" class="social-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="X (formerly Twitter)" class="social-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn" class="social-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram" class="social-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logos">
+            <img src="Images/Goal_7/E_SDG_logo_UN_emblem_square_trans_WEB.png" alt="SDG Logo" class="footer-logo-img">
+            <img src="Images/Goal_7/E_WEB_07.png" alt="Clean Energy Logo" class="footer-logo-img">
+          </div>
         </div>
-        
-        <div class="footer-bottom-minimal">
-            <div class="footer-copyright">
-                <span>&copy; <span id="year"></span> Bright Futures</span>
-            </div>
-            <div class="footer-extra">
-                <span>SDG 7: Affordable Clean Energy</span>
-                <span class="footer-divider">|</span>
-                <div class="page-editors">
-                    <span class="editors-label">Page Editors:</span>
-                    <a href="pageEditor_ST1.html">ST1</a>
-                    <a href="pageEditor_ST2.html">ST2</a>
-                    <a href="pageEditor_ST3.html">ST3</a>
-                    <a href="pageEditor_ST4.html">ST4</a>
-                </div>
-            </div>
+
+        <!-- Footer links -->
+        <div class="footer-links-section">
+          <div class="footer-links-minimal">
+            <a href="volunteer.html">Volunteer</a>
+            <a href="team.html">Team</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="table.html">Data</a>
+          </div>
         </div>
+
+        <!-- Social icons -->
+        <div class="footer-connect">
+          <div class="social-icons">
+            <!-- Icons here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom footer area -->
+      <div class="footer-bottom-minimal">
+        <div class="footer-copyright">
+          <span>&copy; <span id="year"></span> Bright Futures</span>
+        </div>
+        <div class="footer-extra">
+          <span>SDG 7: Affordable Clean Energy</span>
+          <span class="footer-divider">|</span>
+          <div class="page-editors">
+            <span>Page Editors:</span>
+            <a href="pageEditor_ST1.html">ST1</a>
+            <a href="pageEditor_ST2.html">ST2</a>
+            <a href="pageEditor_ST3.html">ST3</a>
+            <a href="pageEditor_ST4.html">ST4</a>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<!-- Go to Top Button -->
-<div class="go-to-top">
+  <!-- Go to top button -->
+  <div class="go-to-top">
     <a href="#top" aria-label="Go to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
-        </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+      </svg>
     </a>
-</div>
+  </div>
 
-<script>
-    // Set current year
+  <!-- Footer scripts -->
+  <script>
+    // Show current year
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Go to top button functionality
-    const goToTopButton = document.querySelector('.go-to-top');
-    
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) { // Show after scrolling 300px
-            goToTopButton.classList.add('show');
-        } else {
-            goToTopButton.classList.remove('show');
-        }
-    });
-    
-    // Smooth scroll to top when button is clicked
-    goToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-</script>
 
-  
+    // Go to top button logic
+    const goToTopButton = document.querySelector('.go-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        goToTopButton.classList.add('show');
+      } else {
+        goToTopButton.classList.remove('show');
+      }
+    });
+    goToTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
 </body>
 </html>
