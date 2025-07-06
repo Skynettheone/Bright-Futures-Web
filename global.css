@@ -167,7 +167,7 @@ header {
     border-radius: 6px;
 }
 
-.nav-link::before {
+/* .nav-link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -178,7 +178,7 @@ header {
     background: linear-gradient(90deg, #FFCC00, #FFD700);
     transform: translateX(-50%);
     transition: width 0.3s ease;
-}
+} */
 
 .nav-link:hover {
     color: #FFCC00;

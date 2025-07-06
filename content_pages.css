@@ -33,41 +33,11 @@ header#top {
     z-index: 50;
 }
 
-.article-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #003566, #001d3d, #000814);
-}
-
 .article-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
     text-align: center;
-}
-
-.article-meta {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.category {
-    background: rgba(0, 53, 102, 0.1);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    color: #003566;
-}
-
-.publish-date {
-    color: #666;
 }
 
 .article-title {
