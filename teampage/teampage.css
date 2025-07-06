@@ -54,7 +54,7 @@
 }
 /* Page title */
 h1.page-title {
-  background-color: rgb(236, 252, 90);
+  background-color: rgb(244, 216, 0);
   padding: 15px;
   text-align: center;
   margin: 0;
@@ -75,8 +75,8 @@ main {
 }
 /* Main content area */
 footer {
-  background: linear-gradient(135deg, #27180f, #eaff02, #2c5364);
-  color: #ffffff;
+  background: linear-gradient(135deg, #e5a205, #eaff00, #2c5364);
+  color: #000000;
   padding: 40px 20px;
   text-align: center;
 }
