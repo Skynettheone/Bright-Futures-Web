@@ -273,6 +273,11 @@ header {
     transform: translateY(-1px);
 }
 
+.profile-toggle.active {
+    background-color: #FFF8E1;
+    color: #2c3e50;
+}
+
 .profile-avatar {
     width: 32px;
     height: 32px;
@@ -286,48 +291,6 @@ header {
     font-weight: 500;
     color: #2c3e50;
 }
-
-.profile-arrow {
-    font-size: 10px;
-    color: #2c3e50;
-    transition: transform 0.3s ease;
-}
-
-.profile-area:hover .profile-arrow {
-    transform: rotate(180deg);
-    color: #FFCC00;
-}
-
-.profile-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    margin-top: 5px;
-}
-
-.profile-link {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.profile-link:hover {
-    background-color: #FFF8E1;
-    color: #FFCC00;
-}
-
 
 /*--------------------------------------------------------------------*/
 

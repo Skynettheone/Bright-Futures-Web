@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.splash-container {
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    color: #2c3e50;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Logo section */
+.logo {
+    margin-bottom: 40px;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+/* Mission section */
+.mission {
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.mission h2 {
+    font-size: 24px;
+    color: #FFCC00;
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.mission p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Team info section */
+.team-info {
+    margin-bottom: 50px;
+}
+
+.team-info h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #2c3e50;
+    border: 2px solid #FFCC00;
+}
+
+/* Loading section */
+.loading {
+    width: 300px;
+}
+
+.loading p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 0;
+    margin-top: 15px;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #FFCC00;
+    width: 0%;
+    border-radius: 4px;
+    animation: fillProgress 4s linear forwards;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
