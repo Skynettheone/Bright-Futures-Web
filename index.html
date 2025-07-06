@@ -27,15 +27,14 @@
             </div>
         </div>
         <nav class="nav-container">
-            <!-- Logo Area -->
+
             <div class="logo-area">
                 <a href="index.html" class="logo">
                     <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                     <span class="logo-text">Bright Futures</span>
                 </a>
             </div>
-            
-            <!-- Navigation Links -->
+
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link active">HOME</a>
@@ -60,10 +59,10 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="content_ST1.html" class="dropdown-link">Affordable Energy</a></li>
+                        <li><a href="content_ST3.html" class="dropdown-link">Affordable Energy</a></li>
                         <li><a href="content_ST2.html" class="dropdown-link">Clean Cooking</a></li>
-                        <li><a href="content_ST3.html" class="dropdown-link">Smarter Energy</a></li>
-                        <li><a href="content_ST4.html" class="dropdown-link">Together for Energy</a></li>
+                        <li><a href="content_ST1.html" class="dropdown-link">Smarter Energy</a></li>
+                        <li><a href="content_ST4.html" class="dropdown-link">Fossil Fuel Footprint</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -71,7 +70,6 @@
                 </li>
             </ul>
             
-            <!-- Profile Toggle Area -->
             <div class="profile-area">
                 <a href="userProfile.html" class="profile-toggle">
                     <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -131,7 +129,7 @@
                 <div class="card-icon">☀️</div>
                 <h3>Affordable Energy</h3>
                 <p>Electric Vehicles, Solar, and Wind Power for Affordable and Clean Energy</p>
-                <a href="content_ST1.html" class="card-link">Explore →</a>
+                <a href="content_ST3.html" class="card-link">Explore →</a>
             </div>
             <div class="card">
                 <div class="card-icon">🔥</div>
@@ -142,13 +140,13 @@
             <div class="card">
                 <div class="card-icon">⚡</div>
                 <h3>Smarter Energy</h3>
-                <p>Energy Efficiency in Buildings and Appliances to Save Money and Cut Emissions</p>
-                <a href="content_ST3.html" class="card-link">Explore →</a>
+                <p>Energy Efficiency in Buildings & Appliances to Cut Emissions</p>
+                <a href="content_ST1.html" class="card-link">Explore →</a>
             </div>
             <div class="card">
-                <div class="card-icon">🤝</div>
-                <h3>Together for Energy</h3>
-                <p>Partnerships and Community Projects Driving Clean Energy Access</p>
+                <div class="card-icon">🛢️</div>
+                <h3>Fossil Fuel Footprint</h3>
+                <p>Understanding the environmental and social consequences</p>
                 <a href="content_ST4.html" class="card-link">Explore →</a>
             </div>
         </div>
@@ -257,13 +255,13 @@
     </div>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -272,7 +270,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({

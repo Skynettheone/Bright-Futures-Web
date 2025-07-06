@@ -21,15 +21,13 @@
           </div>
       </div>
       <nav class="nav-container">
-          <!-- Logo Area -->
           <div class="logo-area">
               <a href="index.html" class="logo">
                   <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                   <span class="logo-text">Bright Futures</span>
               </a>
           </div>
-          
-          <!-- Navigation Links -->
+
           <ul class="nav-menu">
               <li class="nav-item">
                   <a href="index.html" class="nav-link">HOME</a>
@@ -64,8 +62,7 @@
                   <a href="sitemap.html" class="nav-link">SITEMAP</a>
               </li>
           </ul>
-          
-          <!-- Profile Toggle Area -->
+
           <div class="profile-area">
               <a href="userProfile.html" class="profile-toggle">
                   <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -90,7 +87,7 @@
 
 <main class="volunteer-main">
 
-        <!-- Easy-to-Understand Programs Section -->
+        <!-- programs section -->
         <section class="volunteer-programs">
             <div class="section-header">
                 <h2>Choose Your Adventure</h2>
@@ -215,7 +212,7 @@
             </div>
         </section>
 
-        <!-- Success Stories Section -->
+        <!-- success stories section -->
         <section class="reviews-section">
             <div class="reviews-header">
                 <h2>Success Stories from Real Volunteers</h2>
@@ -276,7 +273,7 @@
             </div>
         </section>
 
-        <!-- Simple Feedback Form Section -->
+        <!-- feedback form -->
         <section class="feedback-form-section">
             <div class="form-intro">
                 <h2>How Was Your Experience?</h2>
@@ -396,13 +393,13 @@
 </div>
 
 <script>
-    // Set current year
+    //get current year
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // Go to top button functionality
+    //go to top button function
     const goToTopButton = document.querySelector('.go-to-top');
     
-    // Show/hide button based on scroll position
+    //show/hide button 
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) { // Show after scrolling 300px
             goToTopButton.classList.add('show');
@@ -411,7 +408,7 @@
         }
     });
     
-    // Smooth scroll to top when button is clicked
+    //smooth scroll
     goToTopButton.addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({
@@ -419,7 +416,7 @@
             behavior: 'smooth'
         });
     });
-</script> 
+</script>
 
 <!-- Filter and Form Functionality -->
 <script>

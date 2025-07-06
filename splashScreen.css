@@ -32,7 +32,6 @@ html, body {
     left: 0;
 }
 
-/* Logo section */
 .logo {
     margin-bottom: 40px;
 }
@@ -52,7 +51,6 @@ html, body {
 }
 
 
-/* Mission section */
 .mission {
     margin-bottom: 40px;
     max-width: 600px;
@@ -73,7 +71,6 @@ html, body {
     line-height: 1.5;
 }
 
-/* Team info section */
 .team-info {
     margin-bottom: 50px;
 }
@@ -101,7 +98,6 @@ html, body {
     border: 2px solid #FFCC00;
 }
 
-/* Loading section */
 .loading {
     width: 300px;
 }
@@ -113,7 +109,6 @@ html, body {
     margin-top: 15px;
 }
 
-/* Progress bar */
 .progress-bar {
     width: 100%;
     height: 8px;

@@ -37,7 +37,7 @@ section {
     border-left: 4px solid #ffcc00;
 }
 
-#splash, #volunteer, #content, #challenge, #compliance, #ref {
+#section_1, #section_2, #section_3, #section_4, #section_5, #section_6 {
     color: #242424;
     border-bottom: 2px solid #FFCC00;
     padding-bottom: 0.5rem;

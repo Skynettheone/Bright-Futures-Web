@@ -77,7 +77,7 @@
         </nav>
     </header>
     <section class="stud">
-        <h2>Tharuka Karunanayaka | Student 2</h2>
+        <h2>Tharuka Karunanayaka | Student 1</h2>
     </section>
 
     <div class="container">
@@ -87,7 +87,7 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="section_1">Splash Page</h2>
                     <h3>Technical Description</h3>
                         <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
                     
@@ -102,7 +102,7 @@
             </section>
 
             <section>
-                <h2 id="volunteer">Volunteer Page</h2>
+                <h2 id="section_2">Volunteer Page</h2>
                     <h3>Technical Description</h3>
                         <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
 
@@ -118,7 +118,7 @@
             </section>
 
             <section>
-                <h2 id="content">Content Page</h2>
+                <h2 id="section_3">Content Page</h2>
                     <h3>Technical Description</h3>
                         <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
 
@@ -134,19 +134,19 @@
             </section>
 
             <section>
-                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                <h2 id="section_4"> Challenges and Lessons Learned</h2>
                     <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
             </section>
 
             <section>
-                <h2 id="compliance"> Compliance</h2>
+                <h2 id="section_5"> Compliance</h2>
                     <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
 
                     
             </section>
 
             <section>
-                <h2 id="ref">References</h2>
+                <h2 id="section_6">References</h2>
                 <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
                     <ul class="ref">
                         <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
@@ -162,16 +162,16 @@
         <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
             <ul class="top-level-ul">
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                <li>Student 2</li>
+                <li>Student 1</li>
                     <ul>
                         <li><a href="#">Home page </a></li>
                         <li><a href="#">Table page</a></li>
                         <li><a href="#">Content page</a></li>
                     </ul>
                 
-                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-                <li><a href="#ref">References</a></li>
+                <li><a href="#section_4">Challenges and Lessons Learned</a></li>
+                <li><a href="#section_5">Compliance</a></li>
+                <li><a href="#section_6">References</a></li>
             </ul>
         </aside>
     </div>
@@ -249,13 +249,13 @@
     </div>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -264,7 +264,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({
@@ -273,6 +273,5 @@
             });
         });
     </script>
-    
 </body>
 </html>

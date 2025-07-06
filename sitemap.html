@@ -21,15 +21,14 @@
             </div>
         </div>
         <nav class="nav-container">
-            <!-- Logo Area -->
+
             <div class="logo-area">
                 <a href="index.html" class="logo">
                     <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                     <span class="logo-text">Bright Futures</span>
                 </a>
             </div>
-            
-            <!-- Navigation Links -->
+
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">HOME</a>
@@ -64,8 +63,7 @@
                     <a href="sitemap.html" class="nav-link active">SITEMAP</a>
                 </li>
             </ul>
-            
-            <!-- Profile Toggle Area -->
+
             <div class="profile-area">
                 <a href="userProfile.html" class="profile-toggle">
                     <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -75,7 +73,7 @@
         </nav>
     </header>
 
-        <!-- Topic Area Header -->
+<!-- Topic Area Header -->
     <header class="article-header">
         <div class="article-container">
             <h1 class="article-title">Site Map</h1>
@@ -320,13 +318,13 @@
     </div>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -335,7 +333,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({

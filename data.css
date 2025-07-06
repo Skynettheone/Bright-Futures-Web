@@ -54,7 +54,6 @@ header #top {
     background-clip: text;
 }
 
-/* Custom table with borders and shadows */
 .energy-data-table {
     width: 100%;
     border-collapse: separate;
@@ -66,7 +65,6 @@ header #top {
     border: 1px solid #e5e7eb;
 }
 
-/* Header styling with theme colors */
 .table-header {
     background: linear-gradient(135deg, #ffd60a, #ffbe0b);
     color: #003566;
@@ -93,7 +91,6 @@ header #top {
     border-right: 1px solid rgba(0, 53, 102, 0.2);
 }
 
-/* Main topic header styling */
 .main-topic {
     font-size: 1.2rem;
     font-weight: 700;
@@ -129,7 +126,6 @@ header #top {
     transition: all 0.3s ease;
 }
 
-/* Table logo in header */
 .table-logo-cell {
     background: linear-gradient(135deg, #ffffff, #f8fafc);
     color: #ffd60a;
@@ -153,7 +149,6 @@ header #top {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* Row styling with alternating colors */
 .country-group-header {
     background-color: #f3f4f6;
     font-weight: 700;
@@ -191,7 +186,7 @@ header #top {
     color: #003566;
 }
 
-/* Status indicators - clean pill-style buttons */
+/* status indicators */
 .status-indicator {
     padding: 10px 16px;
     border-radius: 50px;
@@ -232,7 +227,6 @@ header #top {
     color: #1f2937;
 }
 
-/* Links styling */
 .policy-link {
     color: #2c3e50;
     text-decoration: none;
@@ -257,7 +251,7 @@ header #top {
     box-shadow: 0 4px 8px rgba(255, 214, 10, 0.3);
 }
 
-/* Row and column merge styling */
+
 .merged-cell {
     text-align: center;
     font-weight: 700;
@@ -265,7 +259,7 @@ header #top {
     border-bottom: 2px solid #cbd5e1;
 }
 
-/* References Section */
+/* references section */
 .references-section {
     margin: 20px 30px 50px 30px;
     padding: 20px;
@@ -320,7 +314,7 @@ header #top {
     text-decoration: none;
 }
 
-/* Tooltip Styles for Column Headers */
+/* tooltip styles*/
 [data-tooltip] {
     position: relative;
     cursor: help;
@@ -364,7 +358,6 @@ header #top {
     }
 }
 
-/* Ensure tooltips appear above table content */
 .table-header .header-cell {
     overflow: visible;
     position: relative;

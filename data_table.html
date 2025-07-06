@@ -22,15 +22,14 @@
             </div>
         </div>
         <nav class="nav-container">
-            <!-- Logo Area -->
+
             <div class="logo-area">
                 <a href="index.html" class="logo">
                     <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                     <span class="logo-text">Bright Futures</span>
                 </a>
             </div>
-            
-            <!-- Navigation Links -->
+
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">HOME</a>
@@ -65,8 +64,7 @@
                     <a href="sitemap.html" class="nav-link">SITEMAP</a>
                 </li>
             </ul>
-            
-            <!-- Profile Toggle Area -->
+
             <div class="profile-area">
                 <a href="userProfile.html" class="profile-toggle">
                     <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -88,7 +86,7 @@
     <section class="table-section">
         <table class="energy-data-table">
             <thead class="table-header">
-                <!-- First Row: Logo + Main Topic -->
+                <!-- logo + main Topic -->
                 <tr>
                     <th class="table-logo-cell">
                         <div class="table-logo">
@@ -99,7 +97,7 @@
                         Country Energy Progress Data Table
                     </th>
                 </tr>
-                <!-- Second Row: Column Headers -->
+                <!-- column headers -->
                 <tr>
                     <th class="header-cell" data-tooltip="Lists the countries and regions analyzed for SDG 7 energy progress">
                         <div class="header-content">
@@ -145,7 +143,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Scaling Giants Group -->
+                <!-- scaling giants group -->
                 <tr class="country-group-header">
                     <td colspan="6" class="table-cell merged-cell">Scaling Giants - Large Economies Leading Renewable Growth</td>
                 </tr>
@@ -194,7 +192,7 @@
                     </td>
                 </tr>
 
-                <!-- Renewable Powerhouses Group -->
+                <!-- renewable powerhouses group -->
                 <tr class="country-group-header">
                     <td colspan="6" class="table-cell merged-cell">Renewable Powerhouses - Leaders in Clean Energy</td>
                 </tr>
@@ -269,7 +267,7 @@
                     </td>
                 </tr>
 
-                <!-- Industrial Decarbonizers Group -->
+                <!-- industrial decarbonizers group -->
                 <tr class="country-group-header">
                     <td colspan="6" class="table-cell merged-cell">Industrial Decarbonizers - Transitioning Industrial Economies</td>
                 </tr>
@@ -346,7 +344,7 @@
                     </td>
                 </tr>
 
-                <!-- Access & Growth Imperative Group -->
+                <!-- access & growth imperative group -->
                 <tr class="country-group-header">
                     <td colspan="6" class="table-cell merged-cell">Access & Growth Imperative - Expanding Energy Access</td>
                 </tr>
@@ -450,7 +448,7 @@
         </table>
     </section>
 
-    <!-- References Section -->
+    <!-- references section -->
     <section class="references-section">
         <h3 class="references-title">Data Sources and References</h3>
         <div class="references-content">
@@ -537,13 +535,13 @@
     </div>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -552,7 +550,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({

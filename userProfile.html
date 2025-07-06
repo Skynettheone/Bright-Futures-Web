@@ -22,15 +22,14 @@
           </div>
       </div>
       <nav class="nav-container">
-          <!-- Logo Area -->
+
           <div class="logo-area">
               <a href="index.html" class="logo">
                   <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                   <span class="logo-text">Bright Futures</span>
               </a>
           </div>
-          
-          <!-- Navigation Links -->
+
           <ul class="nav-menu">
               <li class="nav-item">
                   <a href="index.html" class="nav-link">HOME</a>
@@ -65,8 +64,7 @@
                   <a href="#" class="nav-link">SITEMAP</a>
               </li>
           </ul>
-          
-          <!-- Profile Toggle Area -->
+
           <div class="profile-area">
               <a href="user_profile.html" class="profile-toggle active">
                   <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -78,7 +76,7 @@
 
     <main class="profile-main">
         <div class="container">
-            <!-- User Avatar and Information -->
+
             <section class="profile-header-section">
                 <div class="profile-card">
                     <div class="profile-image-container">
@@ -109,7 +107,7 @@
                 </div>
             </section>
 
-            <!-- Profile Information Section -->
+
             <section class="profile-details-section">
                 <div class="profile-content">
                     <div class="intro-section">
@@ -171,29 +169,28 @@
                 </div>
             </section>
 
-            <!-- Professional Affiliations Section -->
+
             <section class="volunteering-section">
                 <h2>UN Goals I Support</h2>
                 <div class="volunteering-grid">
                     <div class="volunteer-item">
-                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG 7: Affordable and Clean Energy" class="volunteer-icon large-icon">
+                        <img src="Images/Goal_7/E_GIF_07.gif" alt="SDG 7: Affordable and Clean Energy" class="volunteer-icon large-icon">
                     </div>
                     <div class="volunteer-item">
-                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG 7: Affordable and Clean Energy" class="volunteer-icon large-icon">
+                        <img src="Images/Goal_7/E_GIF_03.gif" alt="SDG 7: Affordable and Clean Energy" class="volunteer-icon large-icon">
                     </div>
                     <div class="volunteer-item">
-                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG Goal" class="volunteer-icon large-icon">
+                        <img src="Images/Goal_7/E_GIF_05.gif" alt="SDG Goal" class="volunteer-icon large-icon">
                     </div>
                     <div class="volunteer-item">
-                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG Goal" class="volunteer-icon large-icon">
+                        <img src="Images/Goal_7/E_GIF_14.gif" alt="SDG Goal" class="volunteer-icon large-icon">
                     </div>
                     <div class="volunteer-item">
-                        <img src="Images/Goal_7/E_WEB_07.png" alt="SDG Goal" class="volunteer-icon large-icon">
+                        <img src="Images/Goal_7/E_GIF_17.gif" alt="SDG Goal" class="volunteer-icon large-icon">
                     </div>
                 </div>
             </section>
 
-            <!-- Expertise Areas Section -->
             <section class="interests-section">
                 <h2>My Interests</h2>
                 <div class="interests-grid">
@@ -224,7 +221,6 @@
                 </div>
             </section>
 
-            <!-- Professional Availability Section -->
             <section class="availability-section">
                 <h2>My Availability</h2>
                 <div class="calendar-container">
@@ -273,7 +269,6 @@
                 </div>
             </section>
 
-            <!-- Professional Contact Section -->
             <section class="contact-section">
                 <h2>Contact Me</h2>
                 <div class="contact-container">
@@ -381,13 +376,13 @@
     </div>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -396,7 +391,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({

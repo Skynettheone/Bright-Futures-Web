@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affordable Energy</title>
     <link rel="icon" href="Images/Goal_7/logo_goal.svg">
-    <link rel="stylesheet" href="content_pages.css">
+    <link rel="stylesheet" href="content_page_ST3.css">
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
@@ -22,15 +22,14 @@
             </div>
         </div>
         <nav class="nav-container">
-            <!-- Logo Area -->
+
             <div class="logo-area">
                 <a href="index.html" class="logo">
                     <img src="Images/Goal_7/logo_goal.svg" alt="Logo" class="logo-image">
                     <span class="logo-text">Bright Futures</span>
                 </a>
             </div>
-            
-            <!-- Navigation Links -->
+
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">HOME</a>
@@ -65,8 +64,7 @@
                     <a href="sitemap.html" class="nav-link">SITEMAP</a>
                 </li>
             </ul>
-            
-            <!-- Profile Toggle Area -->
+
             <div class="profile-area">
                 <a href="userProfile.html" class="profile-toggle">
                     <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
@@ -183,8 +181,8 @@
                         <h2>Call to Action</h2>
                         <p>We all have a role to play in promoting sustainable energy. Consider switching to an electric vehicle, installing solar panels, or supporting local clean energy initiatives. Together, we can create a greener and more equitable future for all.</p>
                         <div class="cta-buttons">
-                            <a href="#intro" class="cta-button">Learn More</a>
-                            <a href="#call-to-action" class="cta-button secondary">Get Involved</a>
+                            <a href="data_table.html" class="cta-button">Learn More</a>
+                            <a href="volunteer.html" class="cta-button secondary">Get Involved</a>
                         </div>
                     </div>
                     <div class="image-content">
@@ -268,31 +266,30 @@
     </div>
     
     <script>
-        // Content Navigation Smooth Scroll
-        // Makes clicking navigation buttons smoothly scroll to the right sections
+        // for smooth scrooling 
         
         window.addEventListener('load', function() {
             
-            // Find all content navigation buttons
+            //find all content nav buttons
             var buttons = document.querySelectorAll('.content-nav .nav-item');
             
-            // Add click handler to each button
+            // adding click handler to each
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].onclick = function(e) {
                     e.preventDefault();
                     
-                    // Get the target section ID
+                    // get target section id
                     var sectionId = this.href.split('#')[1];
                     var section = document.getElementById(sectionId);
                     
                     if (section) {
-                        // Calculate scroll position with header offset
+                        //salculate the position to scroll to
                         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
                         var rect = section.getBoundingClientRect();
                         var absolutePosition = rect.top + currentScroll;
-                        var finalPosition = absolutePosition - 220; // Increased from 160 to 220
+                        var finalPosition = absolutePosition - 220; // 
                         
-                        // Smooth scroll to position
+                        //smooth scroll to position
                         window.scrollTo({
                             top: finalPosition,
                             behavior: 'smooth'
@@ -304,13 +301,13 @@
     </script>
     
     <script>
-        // Set current year
+        //get current year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Go to top button functionality
+        //go to top button function
         const goToTopButton = document.querySelector('.go-to-top');
         
-        // Show/hide button based on scroll position
+        //show/hide button 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) { // Show after scrolling 300px
                 goToTopButton.classList.add('show');
@@ -319,7 +316,7 @@
             }
         });
         
-        // Smooth scroll to top when button is clicked
+        //smooth scroll
         goToTopButton.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({

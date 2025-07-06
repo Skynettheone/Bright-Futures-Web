@@ -95,7 +95,7 @@
     border-color: #ffd60a;
 }
 
-/* Programs Container */
+/* programs container */
 .programs-container {
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +218,7 @@
     background: rgba(255, 204, 0, 1);
 }
 
-/* Reviews Section */
+/* reviews section */
 .reviews-section {
     max-width: 1200px;
     margin: 3rem auto;
@@ -354,7 +354,7 @@
     opacity: 0.7;
 }
 
-/* Feedback Form Section */
+/* feedback form section */
 .feedback-form-section {
     max-width: 700px;
     margin: 3rem auto;
@@ -493,7 +493,7 @@
     min-width: 140px;
 }
 
-/* Submit Button */
+/* submit button */
 .submit-btn {
     background: rgba(255, 204, 0, 0.9);
     color: #2c3e50;
@@ -505,7 +505,7 @@
     background: rgba(255, 204, 0, 1);
 }
 
-/* Cancel Button */
+/* cancel button */
 .cancel-btn {
     background: #f8f9fa;
     color: #2c3e50;

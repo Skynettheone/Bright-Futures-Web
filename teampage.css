@@ -29,7 +29,7 @@
   font-weight: 400;
 }
 
-/* Team Section */
+/* team section */
 .team-section {
   background-color: #f8f9fa;
   padding: 4rem 0;
@@ -46,7 +46,7 @@
   justify-content: center;
 }
 
-/* Team Member Card */
+/* team member card */
 .team-member {
   background: white;
   border-radius: 16px;
@@ -65,7 +65,7 @@
   border-color: rgba(255, 204, 0, 0.3);
 }
 
-/* Member Image */
+/* member image */
 .member-image {
   position: relative;
   height: 350px;
@@ -81,7 +81,7 @@
   object-position: center center;
 }
 
-/* Member Content */
+/* member content */
 .member-content {
   padding: 1.2rem;
   flex-grow: 1;
@@ -108,7 +108,7 @@
   margin-top: 6px;
 }
 
-/* Member Tasks */
+/* member tasks */
 .member-tasks {
   margin-bottom: 0.8rem;
   flex-grow: 1;
@@ -130,7 +130,7 @@
   margin: 0;
 }
 
-/* Social Links */
+/* social links */
 .social-links {
   display: flex;
   gap: 0.4rem;
