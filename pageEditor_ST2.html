@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Editor Student - provide your student name</title>
     <link rel="icon" href="Images/Goal_7/logo_goal.svg">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="pageEditor_validator.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/pageEditor_validator.css">
 
 </head>
 <body>
@@ -88,12 +88,41 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="section_1">Splash Page</h2>
+                <h2 id="section_1">Home Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>
+                            The Home Page is structured with semantic <strong>HTML5</strong> tags to create a logical and organized document. The primary sections include a <code>&lt;header&gt;</code> for navigation, several <code>&lt;section&gt;</code> elements for distinct content areas like the hero banner and content cards, and a <code>&lt;footer&gt;</code> for concluding information.
+                        </p>
+                        <p>
+                            The styling is handled by an external stylesheet (<code>home.css</code>), which uses modern CSS techniques for layout and aesthetics:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Layout and Positioning:</strong> The hero section (<code>.hero</code>) utilizes <code>display: flex</code> to center content vertically. It employs <code>position: absolute</code> for the background video (<code>.hero-video</code>) to layer it behind the text content, which has a higher <code>z-index</code>. The "Clean Energy Solutions" area uses <strong><code>display: grid</code></strong> on the <code>.card-container</code> to create a responsive four-column layout.
+                            </li>
+                            <li>
+                                <strong>Styling and Visual Effects:</strong> The background video has a <strong><code>filter: brightness(0.7)</code></strong> applied to darken it, ensuring the overlay text is legible. <code>linear-gradient</code> is used for smooth background transitions. Interactive elements feature hover effects using the <strong><code>transform: translateY()</code></strong> and <strong><code>box-shadow</code></strong> properties to provide visual feedback.
+                            </li>
+                        </ul>
                     
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul>
+                            <li>
+                                <strong>Semantic HTML:</strong> The page structure is built with semantic tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. This provides an immediate, clear structure for screen readers and other assistive technologies.
+                            </li>
+                            <li>
+                                <strong>Alternative Text:</strong> All <code>&lt;img&gt;</code> tags include descriptive <strong><code>alt</code></strong> attributes, such as "Logo" and "SDG Goal 7 Logo," to convey their meaning to users who cannot see them.
+                            </li>
+                            <li>
+                                <strong>ARIA Labels:</strong> To enhance clarity, <code>aria-label</code> attributes are used where context is needed. The background video has an <code>aria-label="Background video showing renewable energy sources"</code>, and social media icons have labels like <code>aria-label="Facebook"</code>.
+                            </li>
+                            <li>
+                                <strong>Logical Heading Structure:</strong> The page follows a logical heading hierarchy, starting with an <code>&lt;h1&gt;</code> and using <code>&lt;h2&gt;</code> for subsequent major sections. This allows users to easily navigate the document's outline.
+                            </li>
+                            <li>
+                                <strong>Keyboard Navigability:</strong> All interactive elements, primarily anchor tags (<code>&lt;a&gt;</code>), are natively focusable, ensuring that users can navigate the entire page using only a keyboard.
+                            </li>
+                        </ul>
                     
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
@@ -103,12 +132,38 @@
             </section>
 
             <section>
-                <h2 id="section_2">Volunteer Page</h2>
+                <h2 id="section_2">Data Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>
+                            The Data Page is built around <strong><code>&lt;table&gt;</code></strong> element, which is the appropriate choice for displaying structured, tabular data. The table is organized with a <code>&lt;thead&gt;</code> for column headers and a <code>&lt;tbody&gt;</code> for the country data. The <strong><code>colspan</code></strong> attribute is used in the header rows to merge cells, creating a clear categorical structure for the data presented.
+                        </p>
+                        <p>
+                            The styling from <code>data.css</code> enhances the table's readability and visual appeal:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Layout and Styling:</strong> The table headers (<code>.table-header</code>) and the page title (<code>.article-header</code>) use a <strong><code>linear-gradient</code></strong> for a strong visual identity. A subtle <code>box-shadow</code> on the table (<code>.energy-data-table</code>) lifts it from the page. Status indicators are styled with distinct background colors (e.g., <code>.status-red</code>) to provide a quick visual reference.
+                            </li>
+                            <li>
+                                <strong>Interactive Tooltips:</strong> A key feature is the custom CSS-only tooltip on the table headers. This is implemented using a <strong><code>[data-tooltip]</code></strong> attribute selector and a <strong><code>::before</code></strong> pseudo-element. The pseudo-element is absolutely positioned relative to the header cell to display the tooltip text on hover, providing users with extra context for each column.
+                            </li>
+                        </ul> 
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul>
+                            <li>
+                                <strong>Semantic Table Structure:</strong> Using the <code>&lt;table&gt;</code> element with <strong><code>&lt;thead&gt;</code></strong>, <strong><code>&lt;tbody&gt;</code></strong>, <strong><code>&lt;th&gt;</code></strong>, and <strong><code>&lt;td&gt;</code></strong> tags is the most critical accessibility feature here. This structure allows screen readers to correctly interpret the relationships between headers and data cells, so a user can navigate the data logically.
+                            </li>
+                            <li>
+                                <strong>Header Tooltips and Link Titles:</strong> The <strong><code>data-tooltip</code></strong> attribute on each header cell provides descriptive text that explains the column's purpose. Similarly, the <code>&lt;a&gt;</code> tags for external policies include a <strong><code>title</code></strong> attribute, offering more context about the link's destination.
+                            </li>
+                            <li>
+                                <strong>Avoiding Color-Only Information:</strong> While status indicators use color (green, yellow, red) for quick reference, they are not a substitute for text. Crucially, each indicator also contains descriptive text (e.g., "Stagnant progress on energy intensity..."). This ensures that users who are color-blind or cannot perceive color can still understand the information.
+                            </li>
+                            <li>
+                                <strong>Alternative Text:</strong> The SDG logo image within the table header has a descriptive <strong><code>alt="SDG 7 Logo"</code></strong> attribute, ensuring its purpose is conveyed to non-visual users.
+                            </li>
+                        </ul>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
@@ -121,10 +176,30 @@
             <section>
                 <h2 id="section_3">Content Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>
+                            This page is structured using several <strong><code>&lt;article&gt;</code></strong> tags to organize the content into logical sections. The layout for each section is controlled with CSS Flexbox.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Flexbox Layout:</strong> A key class, <code>.article-layout</code>, uses <strong><code>display: flex</code></strong> to place text and images side-by-side. An additional <code>.reverse</code> class is used to alternate the order, creating an engaging, varied layout down the page.
+                            </li>
+                            <li>
+                                <strong>Sticky Navigation:</strong> The page features a navigation bar (<code>.content-nav</code>) that uses <strong><code>position: sticky</code></strong>. This keeps the menu fixed to the top of the screen as the user scrolls, allowing for easy navigation between article sections.
+                            </li>
+                        </ul> 
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul>
+                            <li>
+                                <strong>In-Page Navigation:</strong> The sticky navigation bar contains links like <strong><code>&lt;a href="#intro"&gt;</code></strong> which correspond to elements with an <strong><code>id="intro"</code></strong>. This creates a clear document outline and allows users, especially those with screen readers, to easily jump between sections.
+                            </li>
+                            <li>
+                                <strong>Alternative Text:</strong> Every image on the page includes a descriptive <strong><code>alt</code></strong> attribute (e.g., <code>alt="Improved cookstove in rural household"</code>). This provides essential context for users who cannot see the images.
+                            </li>
+                            <li>
+                                <strong>Logical Headings:</strong> The page uses a logical heading structure (<code>&lt;h1&gt;</code> for the main title and <code>&lt;h2&gt;</code> for section titles), which helps create a clear and navigable structure for all users.
+                            </li>
+                        </ul>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
@@ -136,22 +211,83 @@
 
             <section>
                 <h2 id="section_4"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                        <p>
+                            This project was a great learning experience that pushed me to solve several common web development problems.
+                        </p>
+
+                        <h4>1. Implementing the Sitewide Tagline Banner</h4>
+                        <p>
+                            <strong>Challenge:</strong> I wanted to add the "17 Goals · One Planet · Our Future" banner above the main navigation on every single page. The challenge was making it a consistent, separate element that didn't interfere with the primary navigation bar.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> I structured the HTML by placing the banner's `div` within the main <code>&lt;header&gt;</code> tag but just before the <code>&lt;nav&gt;</code> element. This allowed me to style it as its own distinct bar while keeping it part of the overall header. To ensure consistency, I reused this exact block of HTML across all pages.
+                        </p>
+                        <p>
+                            <strong>Lesson Learned:</strong> This taught me how important a good HTML structure is. By planning the header layout properly, I could easily add new elements later without having to redo the CSS.
+                        </p>
+
+                        <h4>2. Sticky Navigation and Page Anchors</h4>
+                        <p>
+                            <strong>Challenge:</strong> On the content page, whenever I clicked a link to jump to a section, the section's title would get hidden behind the sticky navigation bar.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> I solved this with JavaScript. I wrote a simple script with help of AI that intercepts the click, finds the position of the target section, and then scrolls the page to a point slightly above it, leaving enough space so the title is perfectly visible below the sticky nav.
+                        </p>
+                        <p>
+                            <strong>Lesson Learned:</strong> This was a practical lesson in how CSS features and JavaScript interactivity are connected. Sometimes a problem created by a CSS property needs a JavaScript solution to ensure a good user experience.
+                        </p>
+
+                        <h4>3. Time Management and Staying Focused</h4>
+                        <p>
+                            <strong>Challenge:</strong> Juggling three unique pages and overall page consistency, each with its own content and layout requirements, was more time-consuming than I first expected.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong>I prioritized building the core structure and functionality first before getting lost in minor design tweaks. It helped me allocate my time more evenly across the project.
+                        </p>
+                        <p>
+                            <strong>Lesson Learned:</strong> Project and time management are skills just as important as coding.
+                        </p>
             </section>
 
             <section>
                 <h2 id="section_5"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
-
-                    
+                    <p>
+                        While I am not a legal expert, I have made every effort to ensure these pages are compliant with standard web practices.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Copyright and Attribution:</strong> All images used are believed to be royalty-free or were created for this project. The data presented in the data table includes a "References" section that clearly cites the original sources, ensuring academic integrity.
+                        </li>
+                        <li>
+                            <strong>Content and Security:</strong> The website's content is purely educational and related to a United Nations goal. There is no malicious code, and all external links point to reputable, relevant organizations. The site is designed to be efficient and not place an undue load on network resources.
+                        </li>
+                    </ul> 
             </section>
 
             <section>
                 <h2 id="section_6">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
                     <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                        <li>
+                            Clean Cooking Alliance (2025) <i>Clean Cooking Alliance.</i> Available at: <a href="https://cleancooking.org" target="_blank">https://cleancooking.org</a> (Last accessed: 5 July 2025).
+                        </li>
+                        <li>
+                            Climate Action Tracker (2025) <i>Climate Action Tracker.</i> Available at: <a href="https://climateactiontracker.org/" target="_blank">https://climateactiontracker.org/</a> (Last accessed: 5 July 2025).
+                        </li>
+                        <li>
+                            Ember (2025) <i>Ember.</i> Available at: <a href="https://ember-energy.org/" target="_blank">https://ember-energy.org/</a> (Last accessed: 6 July 2025).
+                        </li>
+                        <li>
+                            International Energy Agency (2025) <i>IEA.</i> Available at: <a href="https://www.iea.org/" target="_blank">https://www.iea.org/</a> (Last accessed: 5 July 2025).
+                        </li>
+                        <li>
+                            Stack Overflow (2025) <i>Stack Overflow.</i> Available at: <a href="https://stackoverflow.com/" target="_blank">https://stackoverflow.com/</a> (Last accessed: 6 July 2025).
+                        </li>
+                        <li>
+                            United Nations (2025) <i>The 17 Goals.</i> Available at: <a href="https://sdgs.un.org/goals" target="_blank">https://sdgs.un.org/goals</a> (Last accessed: 6 July 2025).
+                        </li>
+                        <li>
+                            W3Schools (2025) <i>W3Schools Online Web Tutorials.</i> Available at: <a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a> (Last accessed: 6 July 2025).
+                        </li>
                     </ul>
             </section>
         </main>
@@ -165,9 +301,9 @@
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
                 <li>Student 2</li>
                     <ul>
-                        <li><a href="index.html">Home page </a></li>
-                        <li><a href="data_table.html">Table page</a></li>
-                        <li><a href="content_ST2.html">Content page</a></li>
+                        <li><a href="#section_1">Home page </a></li>
+                        <li><a href="#section_2">Table page</a></li>
+                        <li><a href="#section_3">Content page</a></li>
                     </ul>
                 
                 <li><a href="#section_4">Challenges and Lessons Learned</a></li>
