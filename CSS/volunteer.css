@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   z-index: 50;
+  transition: all 0.3s ease;
 }
 
 .article-container {
@@ -13,6 +14,7 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   text-align: center;
+  animation: fadeInUp 1s ease-out;
 }
 
 .article-title {
@@ -20,6 +22,7 @@
   font-weight: 800;
   margin-bottom: 0.8rem;
   line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .article-subtitle {
@@ -27,6 +30,7 @@
   margin-bottom: 1.5rem;
   opacity: 0.9;
   font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .article-stats {
@@ -36,6 +40,64 @@
     font-size: 0.85rem;
     color: #666;
     font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Mobile responsiveness and animations for volunteer page */
+/* Mobile styles for volunteer header */
+@media (max-width: 768px) {
+    .article-header {
+        padding: 3rem 0 2rem 0;
+        margin-top: 3em;
+    }
+    
+    .article-container {
+        padding: 0 1rem;
+    }
+    
+    .article-title {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .article-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .article-stats {
+        gap: 1rem;
+        font-size: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-header {
+        padding: 2.5rem 0 1.5rem 0;
+        margin-top: 2.5em;
+    }
+    
+    .article-container {
+        padding: 0 0.75rem;
+    }
+    
+    .article-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+    
+    .article-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .article-stats {
+        font-size: 0.75rem;
+    }
 }
 
 /* Volunteer Programs Section */
@@ -44,478 +106,2575 @@
     margin: 3rem auto;
     padding: 0 2rem;
     margin-bottom: 3rem;
+    transition: all 0.3s ease;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .section-header h2 {
-    color: #333;
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
-    font-weight: 600;
-}
-
-.section-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.filter-dropdown {
-    text-align: center;
-    margin-top: 1rem;
-    position: relative;
-}
-
-.filter-dropdown label {
-    font-weight: 500;
-    color: #333;
-    margin-right: 0.5rem;
-    font-size: 1rem;
-}
-
-.filter-dropdown select {
-    padding: 0.8rem 2.5rem 0.8rem 1.2rem;
-    border: 2px solid #ddd;
-    border-radius: 50px;
-    background: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-}
-
-.filter-dropdown select:focus {
-    outline: none;
-    border-color: #ffd60a;
-}
-
-/* programs container */
-.programs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 2rem;
-    justify-content: center;
-}
-
-.program-card {
-    background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f0f0f0;
-    transition: border-color 0.3s ease;
-    width: 300px;
-    max-width: 100%;
-}
-
-.program-card:hover {
-    border-color: #ffd60a;
-}
-
-.program-card.beginner-friendly {
-    border-color: #ffd60a;
-}
-
-.difficulty-badge {
-    background: #ffd60a;
-    color: #333;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    float: right;
-    margin-bottom: 1rem;
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    clear: both;
-}
-
-.program-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    border: 2px solid #e0e0e0;
-}
-
-.card-header h3 {
-    color: #333;
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.card-content p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-}
-
-.program-highlights {
-    margin-bottom: 1rem;
-}
-
-.highlight {
-    font-size: 0.85rem;
-    color: #e6a400;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.3rem;
-}
-
-.program-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.duration,
-.location,
-.difficulty {
-    font-size: 0.8rem;
-    color: #666;
-    background: #f5f5f5;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-weight: 500;
-    border: 1px solid #e0e0e0;
-}
-
-.volunteer-btn {
-    background: rgba(255, 204, 0, 0.9);
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
     color: #2c3e50;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.volunteer-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
-    background: rgba(255, 204, 0, 1);
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
 
-/* reviews section */
-.reviews-section {
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
     margin-bottom: 3rem;
+    transition: all 0.3s ease;
 }
 
-.reviews-header {
+.section-header {
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background: #f9f9f9;
-    border-radius: 15px;
-    border: 1px solid #e0e0e0;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
-.reviews-header h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.reviews-intro {
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
     font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-.overall-rating {
-    text-align: center;
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
 }
 
-.rating-score {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e6a400;
-    margin-right: 1rem;
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
 }
 
-.rating-label {
-    font-size: 1.1rem;
-    color: #e6a400;
-    font-weight: 600;
-    margin-right: 1rem;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.review-count {
-    color: #999;
-    font-size: 0.9rem;
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
 }
 
-.reviews-container {
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
     justify-content: center;
-}
-
-.review-card {
-    background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f0f0f0;
-    width: 300px;
-    max-width: 100%;
-}
-
-.review-card.featured {
-    border-color: #ffd60a;
-}
-
-.review-badge {
-    background: #ffd60a;
-    color: #333;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    float: right;
-    margin-bottom: 1rem;
-}
-
-.review-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    clear: both;
-}
-
-.reviewer-rating {
-    font-size: 1.1rem;
-}
-
-.review-title {
-    font-weight: 600;
-    color: #333;
-    font-size: 1rem;
-}
-
-.review-text {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-}
-
-.review-meta {
+    gap: 2rem;
     font-size: 0.85rem;
-    color: #999;
-}
-
-.reviewer-name {
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 0.2rem;
-}
-
-.review-program {
-    color: #e6a400;
+    color: #666;
     font-weight: 500;
-    display: block;
-    margin-bottom: 0.2rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
 }
 
-.review-date {
-    opacity: 0.7;
-}
-
-/* feedback form section */
-.feedback-form-section {
-    max-width: 700px;
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
-}
-
-.form-intro {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.form-intro h2 {
-    color: #333;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.form-intro p {
-    color: #666;
-    font-size: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.volunteer-feedback-form {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    border: 1px solid #e0e0e0;
-}
-
-.rating-input label,
-.feedback-input label,
-.volunteer-info label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #333;
-    font-size: 1rem;
-}
-
-.emoji-rating {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.emoji-btn {
-    background: #f9f9f9;
-    border: 2px solid #e0e0e0;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: border-color 0.3s ease;
-}
-
-.emoji-btn:hover {
-    border-color: #ffd60a;
-    background: #fff8e1;
-}
-
-.feedback-input {
-    margin-bottom: 1.5rem;
-}
-
-.feedback-input textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    resize: vertical;
-    transition: border-color 0.3s ease;
-    box-sizing: border-box;
-}
-
-.feedback-input textarea:focus {
-    border-color: #ffd60a;
-    outline: none;
-}
-
-.character-count {
-    text-align: right;
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: 0.5rem;
-}
-
-.volunteer-info {
-    margin-bottom: 2rem;
-}
-
-.volunteer-info select {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: white;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-    box-sizing: border-box;
-}
-
-.volunteer-info select:focus {
-    border-color: #ffd60a;
-    outline: none;
-}
-
-.form-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.submit-btn, .cancel-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    border: none;
+    margin-bottom: 3rem;
     transition: all 0.3s ease;
-    min-width: 140px;
 }
 
-/* submit button */
-.submit-btn {
-    background: rgba(255, 204, 0, 0.9);
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
     color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
-    background: rgba(255, 204, 0, 1);
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
 
-/* cancel button */
-.cancel-btn {
-    background: #f8f9fa;
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
     color: #2c3e50;
-    border: 2px solid #ddd;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.cancel-btn:hover {
-    transform: translateY(-2px);
-    background: #e9ecef;
-    border-color: #ccc;
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
 
+.section-header:hover h2::after {
+    width: 60px;
+}
 
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.article-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    flex-wrap: wrap;
+}
+
+/* Volunteer Programs Section */
+.volunteer-programs {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFCC00, #FFD700);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.section-header:hover h2::after {
+    width: 60px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Mobile styles for volunteer programs */
+@media (max-width: 768px) {
+    .volunteer-programs {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-programs {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-header {
+  background: linear-gradient(135deg, #ffd60a 0%, #ffbe0b 100%);
+  color: #003566;
+  padding: 4rem 0 2rem 0;
+  margin-top: 4em;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.article-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 
