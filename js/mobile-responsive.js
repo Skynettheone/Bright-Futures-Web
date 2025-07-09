@@ -1,8 +1,3 @@
-/**
- * Mobile Responsive and Animation Handler
- * Handles mobile menu, smooth animations, and responsive behavior across the website
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile menu functionality
