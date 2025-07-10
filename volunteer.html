@@ -28,12 +28,6 @@
               </a>
           </div>
 
-          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-              <span></span>
-              <span></span>
-              <span></span>
-          </button>
-
           <ul class="nav-menu">
               <li class="nav-item">
                   <a href="index.html" class="nav-link">HOME</a>
@@ -74,6 +68,12 @@
                   <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
                   <span class="profile-name">User</span>
               </a>
+          </div>
+          
+          <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
           </div>
       </nav>
   </header>
@@ -463,10 +463,27 @@
         }
         // For 'duration' and 'location', just show all cards normally
     });
+    
+    // Mobile menu toggle function
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        
+        navMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('active');
+    }
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        });
+    });
 </script> 
-
-<!-- Mobile Responsive JavaScript -->
-<script src="js/mobile-responsive.js"></script>
     
 </body>
 </html>
