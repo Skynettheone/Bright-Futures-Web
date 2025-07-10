@@ -1,12 +1,5 @@
 # Bright Futures Web
 
-<div align="center">
-  <img src="https://img.shields.io/badge/SDG-Goal%207-yellow?style=for-the-badge" alt="SDG Goal 7">
-  <img src="https://img.shields.io/badge/Status-Active-green?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Mobile-Responsive-blue?style=for-the-badge" alt="Mobile Responsive">
-  <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge" alt="License">
-</div>
-
 <br>
 
 **Bright Futures Web** is a modern, fully responsive website designed to promote sustainability, education, and community engagement around the **United Nations Sustainable Development Goals (SDGs)**. The platform focuses on SDG 7 - Affordable and Clean Energy, featuring a clean, accessible design with smooth animations and a mobile-first user experience.
@@ -179,23 +172,6 @@ Bright-Futures-Web/
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-### Contribution Guidelines
-
-- Follow the existing code style and conventions
-- Test your changes across different browsers and devices
-- Update documentation if needed
-- Ensure accessibility standards are maintained
-- Add comments for complex functionality
-
-### Areas for Contribution
-
-- Bug fixes and improvements
-- Mobile UX enhancements
-- Accessibility improvements
-- UI/UX design updates
-- Documentation improvements
-- Internationalization support
 
 ## Changelog
 
