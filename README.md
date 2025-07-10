@@ -19,7 +19,6 @@ This project represents a comprehensive approach to sustainable web development,
 - **Sustainability First**: Every design decision considers environmental impact and energy efficiency
 - **Inclusive Design**: Accessible to users of all abilities with WCAG 2.1 AA compliance
 - **Performance Focused**: Lightweight, fast-loading pages with minimal resource consumption
-- **Mobile-Centric**: Progressive enhancement from mobile to desktop experiences
 - **Content-Driven**: Clean, readable layouts that prioritize educational content
 
 ### Visual Identity
@@ -158,14 +157,11 @@ Bright-Futures-Web/
 ## Accessibility & Best Practices
 
 ### Web Standards Compliance
-- WCAG 2.1 AA compliance for accessibility
 - Semantic HTML5 markup for screen readers
-- Keyboard navigation support throughout the site
 - Skip links for efficient navigation
 - Focus management with visible focus indicators
 
 ### Responsive Design
-- Mobile-first approach with progressive enhancement
 - Touch-friendly interface with 44px minimum touch targets
 - Flexible layouts that work on all screen sizes
 - Optimized typography with appropriate font sizes
@@ -174,23 +170,7 @@ Bright-Futures-Web/
 - Fast loading with optimized assets
 - Smooth animations with reduced motion support
 - Print-friendly styles for documents
-- Dark mode support for user preference
 - High contrast mode compatibility
-
-## Browser Support
-
-| Browser | Version | Status |
-|---------|---------|--------|
-| Chrome | 90+ | Fully Supported |
-| Firefox | 88+ | Fully Supported |
-| Safari | 14+ | Fully Supported |
-| Edge | 90+ | Fully Supported |
-| Mobile Safari | iOS 14+ | Fully Supported |
-| Chrome Mobile | Android 8+ | Fully Supported |
-
-## Contributing
-
-We welcome contributions from the community! Here's how you can help:
 
 ### How to Contribute
 
@@ -253,16 +233,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - Google Fonts for the beautiful Poppins typography
 - Unsplash & Contributors for high-quality images
 
-## Support & Contact
-
-- Issues: [GitHub Issues](https://github.com/Skynettheone/Bright-Futures-Web/issues)
-- Discussions: [GitHub Discussions](https://github.com/Skynettheone/Bright-Futures-Web/discussions)
-- Email: [Contact Us](mailto:tharukakarunanayaka6@gmail.com)
-
 ## Links
 
 - Live Website: [bright-futures-web.netlify.app](https://bright-futures-web.netlify.app)
-- Documentation: [Wiki](https://github.com/Skynettheone/Bright-Futures-Web/wiki)
 - SDG 7 Info: [UN Sustainable Development Goals](https://sdgs.un.org/goals/goal7)
 
 ---
