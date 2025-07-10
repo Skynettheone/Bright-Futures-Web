@@ -173,21 +173,6 @@ Bright-Futures-Web/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Changelog
-
-### v2.0.0 (Latest)
-- Complete mobile responsive redesign
-- Enhanced animations and transitions
-- Mobile hamburger navigation menu
-- Improved accessibility features
-- Dark mode support
-- Performance optimizations
-
-### v1.0.0
-- Initial release
-- Basic content pages
-- Initial styling and layout
-
 ## Team & Leadership
 
 **Project Lead**: [Skynettheone](https://github.com/Skynettheone)
