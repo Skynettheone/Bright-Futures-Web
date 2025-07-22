@@ -520,12 +520,16 @@
 
 @media (max-width: 768px) {
     .article-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .article-stats {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .volunteer-programs, .reviews-section, .feedback-form-section {
+        padding: 0 1rem;
     }
 
     .programs-container,

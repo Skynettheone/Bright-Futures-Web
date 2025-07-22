@@ -465,6 +465,14 @@
 }
 
 @media (max-width: 768px) {
+    .content-cards, .get-involved {
+        padding: 2rem;
+    }
+
+    .cards-header h2, .get-involved h2 {
+        font-size: 1.8rem;
+    }
+
     .action-links {
         flex-direction: column;
         gap: 1rem;
@@ -480,16 +488,16 @@
     }
 
     .hero {
-        padding-left: 0;
+        padding: 0 2rem;
         text-align: center;
         justify-content: center;
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
