@@ -375,6 +375,12 @@ header #top {
 }
 
 @media (max-width: 768px) {
+    .table-cell {
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     .energy-data-table, .table-header, tbody, th, td, tr {
         display: block;
     }

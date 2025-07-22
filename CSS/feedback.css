@@ -298,7 +298,7 @@ input[type="file"]:hover {
 
 @media (max-width: 768px) {
     .feedback-section {
-        padding: 20px;
+        padding: 1rem;
     }
 
     .article-title {

@@ -253,6 +253,10 @@ header#top {
     }
 
     .article-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .article-content {
+        padding: 0 1rem;
     }
 }
