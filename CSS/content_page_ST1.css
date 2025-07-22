@@ -233,6 +233,10 @@ header#top {
 }
 
 @media (max-width: 768px) {
+    .text-content {
+        padding: 1.5rem;
+    }
+
     .article-layout {
         flex-direction: column !important;
     }
