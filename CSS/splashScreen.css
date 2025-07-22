@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -130,91 +131,5 @@ html, body {
     }
     to {
         width: 100%;
-    }
-}
-
-/* Mobile Responsive Styles for Splash Screen */
-@media screen and (max-width: 768px) {
-    .splash-container {
-        padding: 15px;
-    }
-    
-    .logo {
-        margin-bottom: 30px;
-    }
-    
-    .logo-image {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 15px;
-    }
-    
-    .logo h1 {
-        font-size: 28px;
-        margin-bottom: 8px;
-    }
-    
-    .logo p {
-        font-size: 14px;
-    }
-    
-    .loading {
-        width: 280px;
-    }
-    
-    .loading p {
-        font-size: 14px;
-        margin-top: 12px;
-    }
-    
-    .progress-bar {
-        height: 6px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .splash-container {
-        padding: 10px;
-    }
-    
-    .logo {
-        margin-bottom: 25px;
-    }
-    
-    .logo-image {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 12px;
-    }
-    
-    .logo h1 {
-        font-size: 24px;
-        margin-bottom: 6px;
-    }
-    
-    .logo p {
-        font-size: 13px;
-    }
-    
-    .loading {
-        width: 250px;
-        max-width: 90vw;
-    }
-    
-    .loading p {
-        font-size: 13px;
-        margin-top: 10px;
-    }
-    
-    .progress-bar {
-        height: 5px;
-    }
-}
-
-/* Touch-friendly improvements */
-@media (pointer: coarse) {
-    .splash-container {
-        cursor: default;
-        -webkit-tap-highlight-color: transparent;
     }
 }
