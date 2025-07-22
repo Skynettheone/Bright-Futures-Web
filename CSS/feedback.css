@@ -295,3 +295,22 @@ input[type="file"]:hover {
   margin-top: 8px;
   margin-bottom: 4px;
 }
+
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 20px;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .rating {
+        font-size: 40px;
+        gap: 15px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}

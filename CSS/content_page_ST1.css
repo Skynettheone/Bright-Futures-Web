@@ -231,3 +231,28 @@ header#top {
     margin-bottom: 0;
     line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+    .article-layout {
+        flex-direction: column !important;
+    }
+
+    .image-content {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .content-article img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-nav .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+}
