@@ -564,6 +564,15 @@ footer::before {
 }
 
 @media (max-width: 768px) {
+    .sdg-tagline {
+        font-size: 0.7rem;
+    }
+
+    .year-countdown {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+
     .nav-item {
         margin: 1.5rem 0;
     }
