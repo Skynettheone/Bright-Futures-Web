@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --primary-color: #FFCC00;
+    --primary-color-dark: #FFD700;
+    --secondary-color: #2c3e50;
+    --secondary-color-light: #34495e;
+    --text-color: #2c3e50;
+    --background-color: #ffffff;
+    --light-background: #f8f9fa;
+    --light-gray: #ecf0f1;
+    --gray: #7f8c8d;
+    --light-border: rgba(0, 0, 0, 0.06);
+    --font-primary: 'Poppins', sans-serif;
+}
+
 html, body {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-primary);
     margin: 0;
-    background-color: #ffffff;
-    color: #2c3e50;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.5;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -12,20 +26,20 @@ html, body {
 
 header {
     background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid var(--light-border);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
 }
 
 /*-----------------------------------------------------------*/
 
 .sdg-banner {
-    background: linear-gradient(135deg, #FFCC00 0%, #FFD700 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
     height: 36px;
     display: flex;
     align-items: center;
@@ -50,7 +64,7 @@ header {
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    color: #2c3e50;
+    color: var(--text-color);
     text-shadow: none;
 }
 
@@ -67,7 +81,7 @@ header {
 }
 
 .sdg-tagline-link:hover .sdg-tagline {
-    color: #2c3e50;
+    color: var(--text-color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -81,9 +95,10 @@ header {
     font-size: 0.75rem;
     font-weight: 600;
     background: rgba(44, 62, 80, 0.9);
-    color: #FFCC00;
+    color: var(--primary-color);
     padding: 3px 10px;
     border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     text-shadow: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -130,13 +145,13 @@ header {
 .logo-text {
     font-size: 20px;
     font-weight: 650;
-    color: #2c3e50;
+    color: var(--text-color);
     letter-spacing: -0.02em;
     transition: color 0.2s ease;
 }
 
 .logo:hover .logo-text {
-    color: #FFCC00;
+    color: var(--primary-color);
 }
 
 /* Navigation Menu */
@@ -155,7 +170,7 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: #2c3e50;
+    color: var(--text-color);
     font-weight: 400;
     font-size: 14px;
     padding: 8px 16px;
@@ -181,7 +196,7 @@ header {
 } */
 
 .nav-link:hover {
-    color: #FFCC00;
+    color: var(--primary-color);
     transform: translateY(-1px);
 }
 
@@ -190,7 +205,7 @@ header {
 }
 
 .nav-link.active {
-    color: #FFCC00;
+    color: var(--primary-color);
     font-weight: 500;
 }
 
@@ -206,12 +221,12 @@ header {
 .dropdown-arrow {
     font-size: 10px;
     transition: transform 0.3s ease;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 .dropdown:hover .dropdown-arrow {
     transform: rotate(180deg);
-    color: #FFCC00;
+    color: var(--primary-color);
 }
 
 .dropdown-menu {
@@ -247,7 +262,7 @@ header {
 
 .dropdown-link:hover {
     background-color: #FFF8E1;
-    color: #FFCC00;
+    color: var(--primary-color);
 }
 
 /* Profile Area */
@@ -261,7 +276,7 @@ header {
     align-items: center;
     gap: 10px;
     padding: 8px 15px;
-    background-color: #f8f9fa;
+    background-color: var(--light-background);
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -275,7 +290,7 @@ header {
 
 .profile-toggle.active {
     background-color: #FFF8E1;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 .profile-avatar {
@@ -283,21 +298,21 @@ header {
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #FFCC00;
+    border: 2px solid var(--primary-color);
 }
 
 .profile-name {
     font-size: 14px;
     font-weight: 500;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 /*--------------------------------------------------------------------*/
 
 
 footer {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: #ecf0f1;
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-color-light));
+  color: var(--light-gray);
   margin-top: 0;
   position: relative;
   padding: 0;
@@ -310,7 +325,7 @@ footer::before {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #FFCC00, #FFD700, #FFA500);
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-dark), #FFA500);
 }
 
 .footer-container {
@@ -346,13 +361,13 @@ footer::before {
 .footer-logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #FFCC00;
+  color: var(--primary-color);
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .footer-tagline {
-  color: #ecf0f1;
+  color: var(--light-gray);
   font-size: 0.9rem;
   opacity: 0.8;
   margin: 0;
@@ -373,7 +388,7 @@ footer::before {
 }
 
 .footer-links-minimal a {
-  color: #ecf0f1;
+  color: var(--light-gray);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 400;
@@ -382,7 +397,7 @@ footer::before {
 }
 
 .footer-links-minimal a:hover {
-  color: #FFCC00;
+  color: var(--primary-color);
   opacity: 1;
 }
 
@@ -407,13 +422,13 @@ footer::before {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  color: #ecf0f1;
+  color: var(--light-gray);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  background: #ffcc00;
+  background: var(--primary-color);
   border-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -453,7 +468,7 @@ footer::before {
 }
 
 .page-editors a {
-  color: #FFCC00;
+  color: var(--primary-color);
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.2rem 0.4rem;
@@ -463,7 +478,7 @@ footer::before {
 }
 
 .page-editors a:hover {
-  color: #FFD700;
+  color: var(--primary-color-dark);
   background-color: rgba(255, 204, 0, 0.1);
 }
 
@@ -496,8 +511,8 @@ footer::before {
     justify-content: center;
     width: 40px; /* Smaller size */
     height: 40px; /* Smaller size */
-    background-color: #FFCC00;
-    color: #2c3e50;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 50%;
     font-size: 12px;
@@ -508,7 +523,7 @@ footer::before {
 
 .go-to-top a:hover {
     background: rgba(44, 62, 80, 0.9);
-    color: #ffffff;
+    color: var(--background-color);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
