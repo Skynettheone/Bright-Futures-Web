@@ -456,3 +456,370 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* ============================== RESPONSIVE DESIGN ============================== */
+
+/* Large Desktop */
+@media (max-width: 1400px) {
+    .hero-content {
+        max-width: 700px;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+    
+    .card-container {
+        max-width: 1000px;
+    }
+}
+
+/* Standard Desktop */
+@media (max-width: 1200px) {
+    .hero {
+        padding-left: 6%;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .about-content,
+    .involved-content,
+    .quote-content {
+        max-width: 800px;
+        padding: 0 1rem;
+    }
+    
+    .content-cards {
+        max-width: 900px;
+    }
+    
+    .card-container {
+        max-width: 900px;
+        gap: 1.25rem;
+    }
+}
+
+/* Small Desktop / Large Tablet */
+@media (max-width: 1024px) {
+    .hero {
+        padding-left: 5%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 600px;
+    }
+    
+    .stats-container {
+        gap: 3rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .action-links {
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-content {
+        max-width: 90%;
+        padding: 2rem 1rem;
+        margin: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-sdg7,
+    .content-cards,
+    .get-involved,
+    .inspirational-quote {
+        padding: 3rem 1rem;
+    }
+    
+    .about-sdg7 h2,
+    .cards-header h2,
+    .get-involved h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
+    
+    .card {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .stat-item {
+        min-width: 200px;
+    }
+    
+    .progress-container {
+        max-width: 400px;
+    }
+    
+    .action-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .action-link {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .inspirational-quote blockquote {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+    
+    .inspirational-quote blockquote::before,
+    .inspirational-quote blockquote::after {
+        font-size: 2.5rem;
+    }
+    
+    .inspirational-quote blockquote::before {
+        left: -1rem;
+    }
+    
+    .inspirational-quote blockquote::after {
+        right: -1rem;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+        padding: 0 1rem;
+    }
+    
+    .hero-content {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 13px;
+    }
+    
+    .about-sdg7,
+    .content-cards,
+    .get-involved,
+    .inspirational-quote {
+        padding: 2rem 0.75rem;
+    }
+    
+    .about-sdg7 h2,
+    .cards-header h2,
+    .get-involved h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .about-sdg7 p,
+    .cards-header p,
+    .get-involved p {
+        font-size: 0.95rem;
+    }
+    
+    .card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .card p {
+        font-size: 0.9rem;
+    }
+    
+    .card a {
+        font-size: 12px;
+        padding: 0.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+        max-width: 150px;
+    }
+    
+    .progress-container {
+        max-width: 300px;
+    }
+    
+    .progress-title {
+        font-size: 0.9rem;
+    }
+    
+    .progress-percentage {
+        font-size: 1rem;
+    }
+    
+    .action-link {
+        width: 180px;
+        padding: 0.75rem 1.5rem;
+        font-size: 13px;
+    }
+    
+    .inspirational-quote {
+        padding: 2rem 0.5rem;
+    }
+    
+    .inspirational-quote blockquote {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+    }
+    
+    .inspirational-quote blockquote::before,
+    .inspirational-quote blockquote::after {
+        font-size: 2rem;
+    }
+    
+    .inspirational-quote blockquote::before {
+        top: -0.25rem;
+        left: -0.5rem;
+    }
+    
+    .inspirational-quote blockquote::after {
+        bottom: -0.75rem;
+        right: -0.5rem;
+    }
+    
+    .inspirational-quote cite {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .cta-button {
+        padding: 0.75rem 1.75rem;
+        font-size: 12px;
+    }
+    
+    .about-sdg7,
+    .content-cards,
+    .get-involved,
+    .inspirational-quote {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .about-sdg7 h2,
+    .cards-header h2,
+    .get-involved h2 {
+        font-size: 1.4rem;
+    }
+    
+    .card {
+        padding: 1rem 0.75rem;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card p {
+        font-size: 0.85rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+        max-width: 120px;
+    }
+    
+    .action-link {
+        width: 160px;
+        padding: 0.625rem 1.25rem;
+        font-size: 12px;
+    }
+    
+    .inspirational-quote blockquote {
+        font-size: 1rem;
+        padding: 0 0.25rem;
+    }
+    
+    .inspirational-quote blockquote::before {
+        left: -0.25rem;
+    }
+    
+    .inspirational-quote blockquote::after {
+        right: -0.25rem;
+    }
+}

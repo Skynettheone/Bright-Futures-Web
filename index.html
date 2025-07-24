@@ -7,6 +7,7 @@
     <link rel="icon" href="Images/Goal_7/logo_goal.svg">
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/home.css">
+    <script src="JS/responsive.js" defer></script>
     <script>
         //check this is directly connect to index.html
         if (!sessionStorage.getItem('splashShown')) {
@@ -75,6 +76,12 @@
                     <img src="Images/64c007f4-aa90.webp" alt="Profile" class="profile-avatar">
                     <span class="profile-name">User</span>
                 </a>
+                <!-- Mobile Navigation Toggle -->
+                <button class="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -253,31 +260,5 @@
             </svg>
         </a>
     </div>
-    
-    <script>
-        //get current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        //go to top button function
-        const goToTopButton = document.querySelector('.go-to-top');
-        
-        //show/hide button 
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) { // Show after scrolling 300px
-                goToTopButton.classList.add('show');
-            } else {
-                goToTopButton.classList.remove('show');
-            }
-        });
-        
-        //smooth scroll
-        goToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>
