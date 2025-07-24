@@ -172,22 +172,3 @@
   color: white;
 }
 
-.team-container {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-}
-
-.article-title {
-    font-size: 1.8rem;
-}
-
-@media (min-width: 769px) {
-    .team-container {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        padding: 0 2rem;
-    }
-
-    .article-title {
-        font-size: 2.5rem;
-    }
-}

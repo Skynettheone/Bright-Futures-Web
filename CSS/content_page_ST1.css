@@ -68,7 +68,6 @@ header#top {
     position: sticky;
     top: 90px;
     background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #ecede1;
     z-index: 99;
@@ -230,62 +229,4 @@ header#top {
 .global-initiatives-section p {
     margin-bottom: 0;
     line-height: 1.6;
-}
-
-.text-content {
-    padding: 1.5rem;
-}
-
-.article-layout {
-    flex-direction: column !important;
-}
-
-.image-content {
-    max-width: 100%;
-    padding: 1rem;
-}
-
-.content-article img {
-    width: 100%;
-    height: auto;
-}
-
-.content-nav .nav-items {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.article-title {
-    font-size: 1.8rem;
-}
-
-.article-content {
-    padding: 0 1rem;
-}
-
-@media (min-width: 769px) {
-    .article-layout {
-        flex-direction: row !important;
-    }
-
-    .article-layout.reverse {
-        flex-direction: row-reverse !important;
-    }
-
-    .image-content {
-        max-width: 50%;
-    }
-
-    .content-nav .nav-items {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .article-title {
-        font-size: 2.5rem;
-    }
-
-    .article-content {
-        padding: 0 1.5rem;
-    }
 }
